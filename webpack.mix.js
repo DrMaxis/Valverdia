@@ -18,7 +18,15 @@ const mix = require('laravel-mix');
 mix.sass('resources/sass/layouts/ui.scss', 'public/layouts/css');
 
 
+
+
+
+
+mix.js('resources/js/layouts/ui-landing.js', 'public/layouts/js');
 mix.js('resources/js/layouts/ui-main.js', 'public/layouts/js');
+
+
+
 
 
 
@@ -28,8 +36,8 @@ mix.js('resources/js/layouts/ui-main.js', 'public/layouts/js');
 /* CORE STYLES */
 
 
-
-mix.sass('resources/sass/pages/landing.scss', 'public/pages/css');
+// landing
+mix.sass('resources/sass/pages/landing.scss', 'public/css/pages/landing/landing.css');
 
 
 
@@ -59,6 +67,10 @@ mix.sass('resources/sass/inc/bootstrap/bootstrap-grid.min.scss', 'public/css/inc
 
 /* HERO  CSS */
 mix.sass('resources/sass/inc/hero/discover.scss', 'public/css/inc/hero');
+
+/* Animations */
+mix.sass('resources/sass/inc/animation/animate.scss', 'public/css/inc/animation');
+
 
 
 
@@ -97,6 +109,8 @@ mix.js('resources/js/inc/bootstrap/bootstrap.bundle.js', 'public/js/inc/bootstra
 mix.js('resources/js/inc/jquery/jquery333.js', 'public/js/inc/jquery');
 mix.js('resources/js/inc/jquery/jquery.min.js', 'public/js/inc/jquery');
 mix.js('resources/js/inc/jquery/jquery.waypoints.min.js', 'public/js/inc/jquery');
+mix.js('resources/js/inc/jquery/modernizr.js', 'public/js/inc/jquery');
+mix.js('resources/js/inc/jquery/pace.min.js', 'public/js/inc/jquery');
 
 
 
@@ -108,9 +122,26 @@ mix.sass('resources/sass/inc/flexslider/flexslider.scss', 'public/css/inc/flexsl
 mix.sass('resources/sass/inc/flexslider/font.scss', 'public/css/inc/flexslider');
 
 
-
+/* Animations */
+mix.js('resources/js/inc/animation/aos.js', 'public/js/inc/animation');
 
 /* END CORE SCRIPTS */
+
+
+
+
+/* START CUSTOM JAVASCRIPT */
+
+
+
+
+
+
+
+/* END CUSTOM JAVASCRIPT */
+
+
+
 
 
 

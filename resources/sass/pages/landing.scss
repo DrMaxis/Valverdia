@@ -1,0 +1,101 @@
+
+
+
+  .landing {
+    text-align: center;
+  }
+.display-block {
+    display:block;
+}
+
+.scrollable {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(50, 50, 50, 0.25);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-clip: padding-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(50, 50, 50, 0.5);
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgba(50, 50, 50, 0.05);
+  }
+
+  .no-touch .scrollable.hover {
+    overflow-y: hidden;
+  }
+  
+  .no-touch .scrollable.hover:hover {
+    overflow: visible;
+    overflow-y: auto;
+  }
+  
+  .no-touch ::-webkit-scrollbar-button {
+    width: 10px;
+    height: 6px;
+    background-color: rgba(50, 50, 50, 0.05);
+  }
+
+  .padder-lg {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .padder-md {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .padder {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .padder-v {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .no-padder {
+    padding: 0 !important;
+  }
+
+  .w-f-md {
+    bottom: 60px;
+  }
+
+  .m-t-lg {
+    margin-top: 30px;
+  }
+
+  .m-b-lg {
+    margin-bottom: 30px;
+  }
+  
+
+
+
+
+
+/** IMPORTED STYLES START HERE **/
+
+
+
+
+@import '../layouts/aos.scss';
+
+
+
+/** IMPORTED STYLES END HERE **/

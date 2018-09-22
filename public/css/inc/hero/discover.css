@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);.discover-slider {
+.discover-slider {
   font-family: 'Josefin Sans', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -124,21 +124,18 @@
   }
 }
 
-.discover-slider .slide.slide-1 {
+/* .discover-slider .slide.slide-1 {
   background: #E91E63;
 }
-
 .discover-slider .slide.slide-2 {
   background: #3F51B5;
 }
-
 .discover-slider .slide.slide-3 {
   background: #8BC34A;
 }
-
 .discover-slider .slide.slide-4 {
   background: #FFC107;
-}
+} */
 
 @media (max-width: 40em) {
   .discover-slider {

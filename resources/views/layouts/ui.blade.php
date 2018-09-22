@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="{{asset('css/inc/bootstrap/bootstrap-bundle.css')}}">
 
 
+
   <!-- 
         END STYLE DEPENDANTS
 
@@ -37,7 +38,8 @@
 
 	</head>
     <body>
-        @include('inc.navbar')
+        @include('partials.preloader')
+        @include('inc.header')
 
 
 
@@ -69,10 +71,12 @@
 -->
 
 <script language="JavaScript" type="text/javascript" src="{{asset('js/inc/jquery/jquery333.js')}}"></script>
-<script language="JavaScript" type="text/javascript" src="{{asset('layouts/js/ui-main.js')}}"></script>
+{{-- <script language="JavaScript" type="text/javascript" src="{{asset('layouts/js/ui-main.js')}}"></script> --}}
+<script language="JavaScript" type="text/javascript" src="{{asset('js/inc/animation/aos.js')}}"></script>
 <script language="JavaScript" type="text/javascript" src="{{asset('js/inc/bootstrap/bootstrap.js')}}"></script>
 <script language="JavaScript" type="text/javascript" src="{{asset('js/inc/bootstrap/bootstrap.bundle.js')}}"></script>
 <script language="JavaScript" type="text/javascript" src="{{asset('js/inc/bootstrap/ui-main.js')}}"></script>
+<script language="JavaScript" type="text/javascript" src="{{asset('layouts/inc/plugins.js')}}"></script>
 
 <!--
 

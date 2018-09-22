@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+
 
 
 .discover-slider {
@@ -85,7 +85,7 @@
     height: auto;
   }
 }
-.discover-slider .slide.slide-1 {
+/* .discover-slider .slide.slide-1 {
   background: #E91E63;
 }
 .discover-slider .slide.slide-2 {
@@ -96,7 +96,7 @@
 }
 .discover-slider .slide.slide-4 {
   background: #FFC107;
-}
+} */
 @media (max-width: 40em) {
   .discover-slider {
     flex-direction: column;

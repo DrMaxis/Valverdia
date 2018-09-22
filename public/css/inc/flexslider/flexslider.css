@@ -60,7 +60,8 @@
 }
 
 .flexslider .slides img {
-  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
   display: block;
 }
 
@@ -103,11 +104,6 @@ html[xmlns] .flexslider .slides {
 
 .flexslider .slides {
   zoom: 1;
-}
-
-.flexslider .slides img {
-  height: auto;
-  -moz-user-select: none;
 }
 
 .flex-viewport {

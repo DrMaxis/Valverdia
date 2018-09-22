@@ -53,8 +53,9 @@
    -webkit-backface-visibility: hidden;
  }
  .flexslider .slides img {
-   width: 100%;
-   display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
  }
  .flexslider .slides:after {
    /*content: "\0020";*/
@@ -93,10 +94,7 @@
  .flexslider .slides {
    zoom: 1;
  }
- .flexslider .slides img {
-   height: auto;
-   -moz-user-select: none;
- }
+ 
  .flex-viewport {
    max-height: 2000px;
    -webkit-transition: all 1s ease;

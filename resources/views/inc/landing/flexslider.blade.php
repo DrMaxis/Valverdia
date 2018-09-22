@@ -4,6 +4,7 @@
         <div id="main" role="main">
           <section class="slider">
             <div class="flexslider">
+                <div class="flex-viewport">
               <ul class="slides">
                       <li>
                           <img src="{{asset('storage/products/2-tier-book-shelf.jpg')}}" />
@@ -19,7 +20,8 @@
                       </li>
               </ul>
             </div>
-          </section>
+        </div>
+        </section>
           
         </div>
     

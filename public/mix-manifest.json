@@ -1,7 +1,7 @@
 {
-    "/layouts/js/ui-main.js": "/layouts/js/ui-main.js",
+    "/layouts/js/ui-landing.js": "/layouts/js/ui-landing.js",
     "/layouts/css/ui.css": "/layouts/css/ui.css",
-    "/pages/css/landing.css": "/pages/css/landing.css",
+    "/css/pages/landing/landing.css": "/css/pages/landing/landing.css",
     "/css/inc/bootstrap/bootstrap-grid.min.css": "/css/inc/bootstrap/bootstrap-grid.min.css",
     "/css/inc/bootstrap/bootstrap-grid.css": "/css/inc/bootstrap/bootstrap-grid.css",
     "/css/inc/bootstrap/bootstrap-reboot.min.css": "/css/inc/bootstrap/bootstrap-reboot.min.css",
@@ -9,6 +9,7 @@
     "/css/inc/bootstrap/bootstrap.min.css": "/css/inc/bootstrap/bootstrap.min.css",
     "/css/inc/bootstrap/bootstrap.css": "/css/inc/bootstrap/bootstrap.css",
     "/css/inc/hero/discover.css": "/css/inc/hero/discover.css",
+    "/css/inc/animation/animate.css": "/css/inc/animation/animate.css",
     "/css/inc/flexslider/flexslider.css": "/css/inc/flexslider/flexslider.css",
     "/css/inc/flexslider/font.css": "/css/inc/flexslider/font.css",
     "/js/inc/flexslider/flexslider.min.js": "/js/inc/flexslider/flexslider.min.js",
@@ -18,5 +19,9 @@
     "/js/inc/bootstrap/bootstrap.bundle.min.js": "/js/inc/bootstrap/bootstrap.bundle.min.js",
     "/js/inc/bootstrap/bootstrap.bundle.js": "/js/inc/bootstrap/bootstrap.bundle.js",
     "/js/inc/jquery/jquery333.js": "/js/inc/jquery/jquery333.js",
+    "/js/inc/animation/aos.js": "/js/inc/animation/aos.js",
+    "/layouts/js/ui-main.js": "/layouts/js/ui-main.js",
+    "/js/inc/jquery/pace.min.js": "/js/inc/jquery/pace.min.js",
+    "/js/inc/jquery/modernizr.js": "/js/inc/jquery/modernizr.js",
     "/js/inc/jquery/jquery.waypoints.min.js": "/js/inc/jquery/jquery.waypoints.min.js"
 }

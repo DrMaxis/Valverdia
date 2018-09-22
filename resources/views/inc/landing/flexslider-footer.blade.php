@@ -6,14 +6,27 @@
     $(document).ready(function(){
       $('.flexslider').flexslider({
     animation: "fade",
+    animationSpeed: 500,
 		slideshow: true,
 		randomize: true,
 		pauseOnHover: true,
-		touch: true,
-		initDelay: 2500,
+    touch: true,
+    keyboard: false,
+    slideshowSpeed: 7000,
+    smoothHeight: true,
+    before: function(slider) {
+    $(slider).resize();
+      },
+
+    after: function(slider) {
+    $(slider).resize();
+    },
         start: function(slider){
           $('body').removeClass('loading');
-        }
+        },
+
+
       });
     });
   </script>
+
