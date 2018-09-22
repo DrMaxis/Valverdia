@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/', 'LandingPageController@index')->name('landing');
+/* Route::view('/products', 'products');
+Route::view('/product', 'product');
+Route::view('cart', 'cart');
+Route::view('/checkout', 'checkout');
+Route::view('/thankyou', 'thankyou');
+Route::view('/', 'main'); */

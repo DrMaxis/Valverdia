@@ -11,5 +11,44 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+
+
+/*   LAYOUT DEPENDANTS */
+mix.sass('resources/sass/layouts/ui.scss', 'public/layouts/css');
+
+
+mix.js('resources/js/layouts/ui-main.js', 'public/layouts/js');
+
+
+
+
+
+
+/* CORE STYLES */
+mix.sass('resources/sass/pages/landing.scss', 'public/pages/css');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CORE SCRIPTS */
+
+
+
+
+/*  INCLUDES  */
+mix.js('resources/js/inc/jquery333.js', 'public/js/inc/js');
+mix.js('resources/js/inc/jquery.min.js', 'public/js/inc/js');
+mix.js('resources/js/inc/jquery.waypoints.min.js', 'public/js/inc/js');
+mix.js('resources/js/inc/flexslider/flexslider.min.js', 'public/js/inc/flexslider/');
+
+
