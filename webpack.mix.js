@@ -13,6 +13,7 @@ const mix = require('laravel-mix');
 
 
 
+
 /*   LAYOUT DEPENDANTS */
 mix.sass('resources/sass/layouts/ui.scss', 'public/layouts/css');
 
@@ -25,8 +26,39 @@ mix.js('resources/js/layouts/ui-main.js', 'public/layouts/js');
 
 
 /* CORE STYLES */
+
+
+
 mix.sass('resources/sass/pages/landing.scss', 'public/pages/css');
 
+
+
+
+
+
+
+
+                    /*  INCLUDES  */
+
+
+
+
+/* Bootstrap */
+
+mix.sass('resources/sass/inc/bootstrap/bootstrap-grid.min.scss', 'public/css/inc/bootstrap')
+.sass('resources/sass/inc/bootstrap/bootstrap-grid.scss', 'public/css/inc/bootstrap')
+.sass('resources/sass/inc/bootstrap/bootstrap-reboot.min.scss', 'public/css/inc/bootstrap')
+.sass('resources/sass/inc/bootstrap/bootstrap-reboot.scss', 'public/css/inc/bootstrap')
+.sass('resources/sass/inc/bootstrap/bootstrap.min.scss', 'public/css/inc/bootstrap')
+.sass('resources/sass/inc/bootstrap/bootstrap.scss', 'public/css/inc/bootstrap')
+.sourceMaps();
+
+
+
+
+
+/* HERO  CSS */
+mix.sass('resources/sass/inc/hero/discover.scss', 'public/css/inc/hero');
 
 
 
@@ -44,11 +76,64 @@ mix.sass('resources/sass/pages/landing.scss', 'public/pages/css');
 
 
 
+                        /*  INCLUDES  */
 
-/*  INCLUDES  */
-mix.js('resources/js/inc/jquery333.js', 'public/js/inc/js');
-mix.js('resources/js/inc/jquery.min.js', 'public/js/inc/js');
-mix.js('resources/js/inc/jquery.waypoints.min.js', 'public/js/inc/js');
+
+
+/* Bootstrap */
+mix.js('resources/js/inc/bootstrap/bootstrap.bundle.js', 'public/js/inc/bootstrap')
+.js('resources/js/inc/bootstrap/bootstrap.bundle.min.js', 'public/js/inc/bootstrap')
+.js('resources/js/inc/bootstrap/bootstrap.js', 'public/js/inc/bootstrap')
+.js('resources/js/inc/bootstrap/bootstrap.min.js', 'public/js/inc/bootstrap')
+.sourceMaps();
+
+
+
+
+
+
+
+/* JQuery */
+mix.js('resources/js/inc/jquery/jquery333.js', 'public/js/inc/jquery');
+mix.js('resources/js/inc/jquery/jquery.min.js', 'public/js/inc/jquery');
+mix.js('resources/js/inc/jquery/jquery.waypoints.min.js', 'public/js/inc/jquery');
+
+
+
+
+
+/* FlexSlider */
 mix.js('resources/js/inc/flexslider/flexslider.min.js', 'public/js/inc/flexslider/');
+mix.sass('resources/sass/inc/flexslider/flexslider.scss', 'public/css/inc/flexslider');
+mix.sass('resources/sass/inc/flexslider/font.scss', 'public/css/inc/flexslider');
+
+
+
+
+/* END CORE SCRIPTS */
+
+
+
+/* START CUSTOM STYLES */
+
+
+
+
+
+
+/* END CUSTOM STYLES */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

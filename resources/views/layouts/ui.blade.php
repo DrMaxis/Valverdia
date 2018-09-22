@@ -22,6 +22,9 @@
 -->
 	
 <link rel="stylesheet" href="{{asset('layouts/css/ui.css')}}">
+<link rel="stylesheet" href="{{asset('css/inc/bootstrap/bootstrap.css')}}">
+<link rel="stylesheet" href="{{asset('css/inc/bootstrap/bootstrap-grid.css')}}">
+<link rel="stylesheet" href="{{asset('css/inc/bootstrap/bootstrap-bundle.css')}}">
 
 
   <!-- 
@@ -65,8 +68,11 @@
 
 -->
 
-<script language="JavaScript" type="text/javascript" src="{{asset('js/inc/js/jquery.js')}}"></script>
+<script language="JavaScript" type="text/javascript" src="{{asset('js/inc/jquery/jquery333.js')}}"></script>
 <script language="JavaScript" type="text/javascript" src="{{asset('layouts/js/ui-main.js')}}"></script>
+<script language="JavaScript" type="text/javascript" src="{{asset('js/inc/bootstrap/bootstrap.js')}}"></script>
+<script language="JavaScript" type="text/javascript" src="{{asset('js/inc/bootstrap/bootstrap.bundle.js')}}"></script>
+<script language="JavaScript" type="text/javascript" src="{{asset('js/inc/bootstrap/ui-main.js')}}"></script>
 
 <!--
 

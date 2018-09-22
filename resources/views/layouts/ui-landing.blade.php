@@ -22,6 +22,14 @@
 -->
 	
 <link rel="stylesheet" href="{{asset('layouts/css/ui.css')}}">
+<link rel="stylesheet" href="{{asset('css/inc/flexslider/flexslider.css')}}">
+<link rel="stylesheet" href="{{asset('css/inc/flexslider/font.css')}}">
+<link rel="stylesheet" href="{{asset('css/inc/hero/discover.css')}}">
+<link rel="stylesheet" href="{{asset('css/inc/bootstrap/bootstrap.css')}}">
+<link rel="stylesheet" href="{{asset('css/inc/bootstrap/bootstrap-grid.css')}}">
+<link rel="stylesheet" href="{{asset('css/inc/bootstrap/bootstrap-reboot.css')}}">
+
+
 
 
   <!-- 
@@ -43,11 +51,13 @@
 
 
 
+<div class="container">
+
 
 	@yield('content')
 
 
-
+</div>
 
 
 
@@ -66,9 +76,12 @@
 -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script src="{{asset('js/inc/js/jquery.waypoints.min.js')}}"></script>
+
+<script src="{{asset('js/inc/jquery/jquery.waypoints.min.js')}}"></script>
 <script src="{{asset('layouts/js/ui-main.js')}}"></script>
-@include('inc.landing-flexslider-footer')
+<script src="{{asset('js/inc/bootstrap/bootstrap.js')}}"></script>
+<script src="{{asset('js/inc/bootstrap/bootstrap.bundle.js')}}"></script>
+@include('inc.landing.flexslider-footer')
 <!--
 
 	END JAVASCRIPT DEPENDANTS
