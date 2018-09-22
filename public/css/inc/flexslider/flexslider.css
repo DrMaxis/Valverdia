@@ -100,6 +100,8 @@ html[xmlns] .flexslider .slides {
   -webkit-box-shadow: "" 0 1px 4px rgba(0, 0, 0, 0.2);
   -o-box-shadow: "" 0 1px 4px rgba(0, 0, 0, 0.2);
   box-shadow: "" 0 1px 4px rgba(0, 0, 0, 0.2);
+  margin: 50px 0 10px !important;
+  width: 100%;
 }
 
 .flexslider .slides {
@@ -303,5 +305,10 @@ html[xmlns] .flexslider .slides {
     opacity: 1;
     right: 10px;
   }
+}
+
+.slide-hide,
+.slide-hide > img {
+  height: 1px;
 }
 

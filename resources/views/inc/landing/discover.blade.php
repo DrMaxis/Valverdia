@@ -8,16 +8,11 @@
 
 <div class="row section-heading aos-init aos-animate" data-aos="fade-up">
 
-    
+
         <div class="col-full">
-            <h1 class="" style="
-text-align:  center;
-position:  relative;
-bottom: 72px;
-">xxxxxxxx</h1>
-            <h3 data-num="02" class="subheading">What We Do</h3>
-            <h3 class="section-heading">Clean Credit Corp is a local company that specializes in Credit Repair &amp; Debt Elimination.</h3>
-            <p class="leading-p">Clean Credit Corp is the fastest credit repair company in the United States, which speccialises in Factual Verification, Legal Demands &amp;  the Number Mulitple Round Process to elminiate debt and repair customer credit.  </p>
+            <h3 class="subheading section-divider">Discover Award Winning Designs</h3>
+            
+            
         </div>
     </div>
 

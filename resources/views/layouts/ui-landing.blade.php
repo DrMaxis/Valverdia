@@ -47,7 +47,7 @@
 
 
 <body id="top">
-    
+
     @include('partials.preloader')
     @include('inc.header')
 

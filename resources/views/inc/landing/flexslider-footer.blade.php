@@ -13,19 +13,20 @@
     touch: true,
     keyboard: false,
     slideshowSpeed: 7000,
-    smoothHeight: true,
-    before: function(slider) {
-    $(slider).resize();
-      },
-
-    after: function(slider) {
-    $(slider).resize();
-    },
-        start: function(slider){
-          $('body').removeClass('loading');
-        },
-
-
+    controlNav: true,
+   /*  before: function(slider) {
+                $(slider).resize();
+                $(slider).find('li').not('.flex-active-slide').removeClass('slide-hide');
+            },
+            after: function(slider) {
+                $(slider).find('li').not('.flex-active-slide').addClass('slide-hide');
+                $(slider).resize();
+            }, */
+            start: function(slider) {
+              $('body').removeClass('loading');
+                /* $(slider).find('li').not('.flex-active-slide').addClass('slide-hide'); */
+            }  
+       
       });
     });
   </script>
