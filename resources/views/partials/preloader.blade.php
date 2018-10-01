@@ -1,7 +1,16 @@
-<div id="preloader" style="display: none;">
-        <div id="loader" class="dots-jump" style="display: none;">
-            <div></div>
-            <div></div>
-            <div></div>
+<!--/-/-/-/-/-/-/-/-/
+	Begin Pre-loader
+-/-/-/-/-/-/-/-/-/-/-/-->
+    <div class="preloader">
+    <div class="loading-center">
+        <div class="loading-center-absolute">
+            <div class="object object_one"></div>
+            <div class="object object_two"></div>
+            <div class="object object_three"></div>
         </div>
     </div>
+</div> 
+<!--/-/-/-/-/-/-/-/-/
+	End Pre-loader
+-/-/-/-/-/-/-/-/-/-/-/-->
+

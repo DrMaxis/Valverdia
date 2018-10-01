@@ -14,146 +14,39 @@ const mix = require('laravel-mix');
 
 
 
-/*   LAYOUT DEPENDANTS */
-mix.sass('resources/sass/layouts/ui.scss', 'public/layouts/css');
-
-
-
-
-
-
-mix.js('resources/js/layouts/ui-landing.js', 'public/layouts/js');
-mix.js('resources/js/layouts/ui-main.js', 'public/layouts/js');
-
-
-
-
-
-
-
-
-
-/* CORE STYLES */
-
-
-// landing
-mix.sass('resources/sass/pages/landing.scss', 'public/css/pages/landing/landing.css');
-
-
-
-
-
-
-
-
-                    /*  INCLUDES  */
-
-
-
-
-/* Bootstrap */
-
-mix.sass('resources/sass/inc/bootstrap/bootstrap-grid.min.scss', 'public/css/inc/bootstrap')
-.sass('resources/sass/inc/bootstrap/bootstrap-grid.scss', 'public/css/inc/bootstrap')
-.sass('resources/sass/inc/bootstrap/bootstrap-reboot.min.scss', 'public/css/inc/bootstrap')
-.sass('resources/sass/inc/bootstrap/bootstrap-reboot.scss', 'public/css/inc/bootstrap')
-.sass('resources/sass/inc/bootstrap/bootstrap.min.scss', 'public/css/inc/bootstrap')
-.sass('resources/sass/inc/bootstrap/bootstrap.scss', 'public/css/inc/bootstrap')
-.sourceMaps();
-
-
-
-
-
-/* HERO  CSS */
-mix.sass('resources/sass/inc/hero/discover.scss', 'public/css/inc/hero');
-
-/* Animations */
-mix.sass('resources/sass/inc/animation/animate.scss', 'public/css/inc/animation');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* CORE SCRIPTS */
-
-
-
-                        /*  INCLUDES  */
-
-
-
-/* Bootstrap */
-mix.js('resources/js/inc/bootstrap/bootstrap.bundle.js', 'public/js/inc/bootstrap')
-.js('resources/js/inc/bootstrap/bootstrap.bundle.min.js', 'public/js/inc/bootstrap')
-.js('resources/js/inc/bootstrap/bootstrap.js', 'public/js/inc/bootstrap')
-.js('resources/js/inc/bootstrap/bootstrap.min.js', 'public/js/inc/bootstrap')
-.sourceMaps();
-
-
-
-
-
-
-
-/* JQuery */
-mix.js('resources/js/inc/jquery/jquery333.js', 'public/js/inc/jquery');
-mix.js('resources/js/inc/jquery/jquery.min.js', 'public/js/inc/jquery');
-mix.js('resources/js/inc/jquery/jquery.waypoints.min.js', 'public/js/inc/jquery');
-mix.js('resources/js/inc/jquery/modernizr.js', 'public/js/inc/jquery');
-mix.js('resources/js/inc/jquery/pace.min.js', 'public/js/inc/jquery');
-
-
-
-
-
-/* FlexSlider */
-mix.js('resources/js/inc/flexslider/flexslider.min.js', 'public/js/inc/flexslider/');
-mix.sass('resources/sass/inc/flexslider/flexslider.scss', 'public/css/inc/flexslider');
-mix.sass('resources/sass/inc/flexslider/font.scss', 'public/css/inc/flexslider');
-
-
-/* Animations */
-mix.js('resources/js/inc/animation/aos.js', 'public/js/inc/animation');
-
-/* END CORE SCRIPTS */
-
-
-
-
-/* START CUSTOM JAVASCRIPT */
-
-
-
-
-
-
-
-/* END CUSTOM JAVASCRIPT */
-
-
-
-
-
-
-/* START CUSTOM STYLES */
-
-
-
-
-
-
-/* END CUSTOM STYLES */
-
+/* Styles and Animations */
+mix
+.sass('resources/sass/animate.scss', 'public/css')
+.sass('resources/sass/base.scss', 'public/css')
+.sass('resources/sass/bootstrap.min.scss', 'public/css')
+.sass('resources/sass/default.scss', 'public/css')
+.sass('resources/sass/fa.scss', 'public/css')
+.sass('resources/sass/meanmenu.min.scss', 'public/css')
+.sass('resources/sass/nivo-slider.scss', 'public/css')
+.sass('resources/sass/owl.carousel.min.scss', 'public/css')
+.sass('resources/sass/p7icon.scss', 'public/css')
+.sass('resources/sass/priceslider.scss', 'public/css')
+.sass('resources/sass/style.scss', 'public/css')
+.sass('resources/sass/responsive.scss', 'public/css');
+
+
+
+
+/* Javascript and Ajax */
+mix
+.js('resources/js/jquery.js', 'public/js/vendor')
+.js('resources/js/jquery-1.12.4.min.js', 'public/js/vendor')
+.js('resources/js/modernizr-2.8.3.min.js', 'public/js/vendor')
+.js('resources/js/bootstrap.min.js', 'public/js')
+.js('resources/js/jquery.elevateZoom-3.0.8.min.js', 'public/js')
+.js('resources/js/jquery.meanmenu.min.js', 'public/js')
+.js('resources/js/jquery.nivo.slider.js', 'public/js')
+.js('resources/js/jquery.scrollUp.js', 'public/js')
+.js('resources/js/main.js', 'public/js')
+.js('resources/js/owl.carousel.min.js', 'public/js')
+.js('resources/js/plugins.js', 'public/js')
+.js('resources/js/priceslider.js', 'public/js')
+.js('resources/js/wow.min.js', 'public/js');
 
 
 

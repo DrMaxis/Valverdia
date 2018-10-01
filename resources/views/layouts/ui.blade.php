@@ -5,41 +5,22 @@
   Unwanted.kr
 -->
 
-<html lang="{{ app()->getLocale() }}">
-
-<head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-	<meta name="description" content="JJ International - Delivering Quality and Style around the globe." />
-    <meta name="keywords" content="International Shipping, Wholesale, Drop Shipping, Furniture, Patio, Modern, Free Shipping" />
-	
-	
-
-   <!-- 
-         START STYLE DEPENDANTS
-
--->
-	
-<link rel="stylesheet" href="{{asset('layouts/css/ui.css')}}">
-<link rel="stylesheet" href="{{asset('css/inc/bootstrap/bootstrap.css')}}">
-<link rel="stylesheet" href="{{asset('css/inc/bootstrap/bootstrap-grid.css')}}">
-<link rel="stylesheet" href="{{asset('css/inc/bootstrap/bootstrap-bundle.css')}}">
+<html class="no-js" lang="{{ app()->getLocale() }}">
 
 
+@include('inc.head')
 
-  <!-- 
-        END STYLE DEPENDANTS
 
--->
-	
-
-    <title>{{config('app.name', 'Valverdia')}}</title>
-
-	</head>
     <body>
+<!--/-/-/-/-/-/-/-/-/
+    Begin UI-Container  
+-/-/-/-/-/-/-/-/-/-->
+        <div class="ui-container"> 
+            
         @include('partials.preloader')
+        @include('partials.newsPopup')
         @include('inc.header')
+        @yield('content')
 
 
 
@@ -49,7 +30,13 @@
 
 
 
-	@yield('content')
+	
+@include('inc.footer')
+</div>
+<!--/-/-/-/-/-/-/-/-/
+    End UI-Container  
+-/-/-/-/-/-/-/-/-/-->
+    
 
 
 
@@ -63,27 +50,63 @@
 
 
 
-
-<!--
-
-	START JAVASCRIPT DEPENDANTS
-
--->
-
-<script language="JavaScript" type="text/javascript" src="{{asset('js/inc/jquery/jquery333.js')}}"></script>
-{{-- <script language="JavaScript" type="text/javascript" src="{{asset('layouts/js/ui-main.js')}}"></script> --}}
-<script language="JavaScript" type="text/javascript" src="{{asset('js/inc/animation/aos.js')}}"></script>
-<script language="JavaScript" type="text/javascript" src="{{asset('js/inc/bootstrap/bootstrap.js')}}"></script>
-<script language="JavaScript" type="text/javascript" src="{{asset('js/inc/bootstrap/bootstrap.bundle.js')}}"></script>
-<script language="JavaScript" type="text/javascript" src="{{asset('js/inc/bootstrap/ui-main.js')}}"></script>
-<script language="JavaScript" type="text/javascript" src="{{asset('layouts/inc/plugins.js')}}"></script>
-
-<!--
-
-	END JAVASCRIPT DEPENDANTS
+<!--/-/-/-/-/-/-/-/-/
+    Begin JAVASCRIPT  
+-/-/-/-/-/-/-/-/-/-->
 
 
--->
+<!--/-/-/-/-/-/-/-/-/ 
+    jquery 1.12.4 
+-/-/-/-/-/-/-/-/-/-->
+<script type="text/javascript" src="{{asset('js/vendor/jquery.js')}}"></script>
+
+
+<!--/-/-/-/-/-/-/-/-/ 
+    Mobile Menu  
+-/-/-/-/-/-/-/-/-/-->
+<script src="{{asset('js/jquery.meanmenu.min.js')}}"></script>
+<!--/-/-/-/-/-/-/-/-/ 
+    Scroll to Top
+-/-/-/-/-/-/-/-/-/-->
+<script src="{{asset('js/jquery.scrollUp.js')}}"></script>
+<!--/-/-/-/-/-/-/-/-/ 
+    Owl Carousel
+-/-/-/-/-/-/-/-/-/-->
+<script src="{{asset('js/owl.carousel.min.js')}}"></script>
+<!--/-/-/-/-/-/-/-/-/ 
+    W0W 
+-/-/-/-/-/-/-/-/-/-->
+<script src="{{asset('js/wow.min.js')}}"></script>
+<!--/-/-/-/-/-/-/-/-/ 
+    Price Slider
+-/-/-/-/-/-/-/-/-/-->
+<script src="{{asset('js/priceslider.js')}}"></script>
+<!--/-/-/-/-/-/-/-/-/ 
+    Elevated Zoom
+-/-/-/-/-/-/-/-/-/-->
+<script src="{{asset('js/jquery.elevateZoom-3.0.8.min.js')}}"></script>
+<!--/-/-/-/-/-/-/-/-/ 
+    Slider
+-/-/-/-/-/-/-/-/-/-->
+<script src="{{asset('js/jquery.nivo.slider.js')}}"></script>
+<!--/-/-/-/-/-/-/-/-/ 
+    BootStrap
+-/-/-/-/-/-/-/-/-/-->
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
+<!--/-/-/-/-/-/-/-/-/ 
+    Extendable Plugins
+-/-/-/-/-/-/-/-/-/-->
+<script src="{{asset('js/plugins.js')}}"></script>
+<!--/-/-/-/-/-/-/-/-/ 
+    Main
+-/-/-/-/-/-/-/-/-/-->
+<script src="{{asset('js/main.js')}}"></script>
+
+
+
+<!--/-/-/-/-/-/-/-/-/
+    END JAVASCRIPT  
+-/-/-/-/-/-/-/-/-/-->
 
 
 
