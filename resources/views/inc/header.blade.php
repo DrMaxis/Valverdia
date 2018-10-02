@@ -34,21 +34,10 @@
                      <div class="primary-menu">
                          <nav>
                              <ul class="primary-menu-list text-center">
-                                 <li><a href="index.html">home<i class="pe-7s-angle-down"></i></a>
-                                     <!--/-/-/-/-/-/-/-/-/
-                                      Begin  Home Dropdown 
-                                        -/-/-/-/-/-/-/-/-/-->
-                                     <ul class="ht-dropdown">
-                                         <li><a href="index.html">Home Version 1</a></li>
-                                         <li><a href="home-2.html">Home Version 2</a></li>
-                                         <li><a href="home-3.html">Home Version 3</a></li>
-                                         <li><a href="home-4.html">Home Version 4</a></li>
-                                     </ul>
-                                     <!--/-/-/-/-/-/-/-/-/ 
-                                        End Home Dropdown 
-                                        -/-/-/-/-/-/-/-/-/-->
+                                 <li><a href="index.html">home</a>
+
                                  </li>
-                                 <li><a href="#">furniture<i class="pe-7s-angle-down"></i></a>
+                                 <li><a href="#">LED Tubes<i class="pe-7s-angle-down"></i></a>
                                      <!--/-/-/-/-/-/-/-/-/ 
                                         Begin Mega Menu 
                                         -/-/-/-/-/-/-/-/-/-->
@@ -57,12 +46,10 @@
                                             Begin Sub Menu 
                                             -/-/-/-/-/-/-/-/-/-->
                                          <li>
-                                             <h3>SOFAS & LOVESEATSs</h3>
+                                             <h3>RGB Lights</h3>
                                              <ul>
-                                                 <li><a href="categorie-page.html">convallis neceros</a></li>
-                                                 <li><a href="categorie-page.html">Outdoor Rugs</a></li>
-                                                 <li><a href="categorie-page.html">Mice and Trackballs</a></li>
-                                                 <li><a href="categorie-page.html">Cameras</a></li>
+                                                 <li><a href="categorie-page.html">Polyphasic Colored Tubes</a></li>
+                
                                              </ul>
                                          </li>
                                          <!--/-/-/-/-/-/-/-/-/ 
@@ -73,12 +60,10 @@
                                            Begin Single Mega Sub Menu 
                                             -/-/-/-/-/-/-/-/-/-->
                                          <li>
-                                             <h3>Chairs & Recliners</h3>
+                                             <h3>Smart Lights</h3>
                                              <ul>
-                                                 <li><a href="categorie-page.html">commodo nunc</a></li>
-                                                 <li><a href="categorie-page.html">dignissim porta</a></li>
-                                                 <li><a href="categorie-page.html">necvelit dignissim</a></li>
-                                                 <li><a href="categorie-page.html">venenatis lacinia</a></li>
+                                                 <li><a href="categorie-page.html">Saber Light</a></li>
+                                                 <li><a href="categorie-page.html">FLEX LED</a></li>
                                              </ul>
                                          </li>
                                          <!--/-/-/-/-/-/-/-/-/ 
@@ -89,86 +74,7 @@
                                         Mega Menu End 
                                         -/-/-/-/-/-/-/-/-/-->
                                  </li>
-                                 <li class="static-menu"><a href="#">decor<i class="pe-7s-angle-down"></i></a>
-                                     <!--/-/-/-/-/-/-/-/-/ 
-                                        Mega Menu-2 Begin 
-                                        -/-/-/-/-/-/-/-/-/-->
-                                     <ul class="ht-dropdown mega-menu-2">
-                                         <!--/-/-/-/-/-/-/-/-/ 
-                                            Single Mega Sub Menu Begin 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                         <li>
-                                             <h3>Art Gallery</h3>
-                                             <ul>
-                                                 <li><a href="categorie-page.html">congue nonorna</a></li>
-                                                 <li><a href="categorie-page.html">Etiam sapien</a></li>
-                                                 <li><a href="categorie-page.html">Outdoor Lighting</a></li>
-                                                 <li><a href="categorie-page.html">sapien enim</a></li>
-                                             </ul>
-                                         </li>
-
-                                         <!--/-/-/-/-/-/-/-/-/ 
-                                           Begin Single Mega Sub Menu 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                         <li>
-                                             <h3>Lighting</h3>
-                                             <ul>
-                                                 <li><a href="categorie-page.html">commodo nunc</a></li>
-                                                 <li><a href="categorie-page.html">elementum dolor</a></li>
-                                                 <li><a href="categorie-page.html">ligula velvenen</a></li>
-                                                 <li><a href="categorie-page.html">Vestibulum tempor</a></li>
-                                             </ul>
-                                         </li>
-                                         <!--/-/-/-/-/-/-/-/-/ 
-                                           Begin Single Mega Sub Menu 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                         <li>
-                                             <h3>Rugs</h3>
-                                             <ul>
-                                                 <li><a href="categorie-page.html">blandit vehicula</a></li>
-                                                 <li><a href="categorie-page.html">Praesent molestie</a></li>
-                                                 <li><a href="categorie-page.html">sagittis ipsum</a></li>
-                                                 <li><a href="categorie-page.html">venenatis innunc</a></li>
-                                             </ul>
-                                         </li>
-                                         <!--/-/-/-/-/-/-/-/-/ 
-                                           Begin Single Mega Sub Menu 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                         <li>
-                                             <h3>Throw Pillows</h3>
-                                             <ul>
-                                                 <li><a href="categorie-page.html">Fire Pits</a></li>
-                                                 <li><a href="categorie-page.html">Garden Accents</a></li>
-                                                 <li><a href="categorie-page.html">Outdoor Fountains</a></li>
-                                                 <li><a href="categorie-page.html">Patio Heaters</a></li>
-                                             </ul>
-                                         </li>
-                                         
-                                     </ul>
-                                     <!--/-/-/-/-/-/-/-/-/ 
-                                        End Mega Menu-2
-                                         -/-/-/-/-/-/-/-/-/-->
-                                 </li>
-                                 <li><a href="#">pages<i class="pe-7s-angle-down"></i></a>
-                                     <!--/-/-/-/-/-/-/-/-/
-                                        Begin Home Dropdown 
-                                         -/-/-/-/-/-/-/-/-/-->
-                                     <ul class="ht-dropdown">
-                                         <li><a href="categorie-page.html">shop</a></li>
-                                         <li><a href="product-page.html">Product Details</a></li>
-                                         <li><a href="cart.html">cart</a></li>
-                                         <li><a href="checkout.html">checkout</a></li>
-                                         <li><a href="wish-list.html">wish list</a></li>
-                                         <li><a href="blog.html">blog</a></li>
-                                         <li><a href="blog-details.html">blog details</a></li>
-                                         <li><a href="contact.html">contact</a></li>
-                                         <li><a href="privacy.html">Privacy Policy</a></li>
-                                         <li><a href="404.html">404</a></li>
-                                     </ul>
-                                     <!--/-/-/-/-/-/-/-/-/ 
-                                        End Home Dropdown 
-                                        -/-/-/-/-/-/-/-/-/-->
-                                 </li>
+                                
                                  <li><a href="about-us.html">about us</a></li>
                              </ul>
                          </nav>
@@ -297,144 +203,48 @@
                  <div class="mobile-menu visible-sm visible-xs">
                      <nav>
                          <ul>
-                             <li><a href="#">Home</a>
-                                 <!--/-/-/-/-/-/-/-/-/ 
-                                    Begin Mobile Menu Dropdown 
-                                    -/-/-/-/-/-/-/-/-/-->
-                                 <ul>
-                                     <li><a href="index.html">Home Version 1</a></li>
-                                    <li><a href="home-2.html">Home Version 2</a></li>
-                                     <li><a href="home-3.html">Home Version 3</a></li>
-                                     <li><a href="home-4.html">Home Version 4</a></li>
-                                 </ul>
-                                 <!--/-/-/-/-/-/-/-/-/ 
-                                    End Mobile Menu Dropdown 
-                                    -/-/-/-/-/-/-/-/-/-->
-                             </li>
-                             <li><a href="#">Furniture</a>
-                                 <!--/-/-/-/-/-/-/-/-/ 
-                                    Begin Mobile Menu Dropdown 
-                                    -/-/-/-/-/-/-/-/-/-->
-                                 <ul>
-                                     <li><a href="#">sofas & loveseats</a>
-                                         <!--/-/-/-/-/-/-/-/-/ 
-                                           Begin  Mobile Menu Sub-Dropdown 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                         <ul>
-                                             <li><a href="categorie-page.html">convallis neceros</a></li>
-                                             <li><a href="categorie-page.html">Outdoor Rugs</a></li>
-                                             <li><a href="categorie-page.html">Mice and Trackballs</a></li>
-                                             <li><a href="categorie-page.html">Cameras</a></li>
-                                         </ul>
-                                         <!--/-/-/-/-/-/-/-/-/ 
-                                           End  Mobile Menu Sub-Dropdown 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                     </li>
-                                     <li><a href="#">chairs & recliners</a>
-                                         <!--/-/-/-/-/-/-/-/-/ 
-                                           Begin Mobile Menu Sub-Dropdown 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                         <ul>
-                                             <li><a href="categorie-page.html">commodo nunc</a></li>
-                                             <li><a href="categorie-page.html">dignissim porta</a></li>
-                                             <li><a href="categorie-page.html">necvelit dignissim</a></li>
-                                             <li><a href="categorie-page.html">venenatis lacinia</a></li>
-                                         </ul>
-                                         <!--/-/-/-/-/-/-/-/-/ 
-                                          End   Mobile Menu Sub-Dropdown 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                     </li>
-                                 </ul>
-                                 <!--/-/-/-/-/-/-/-/-/ 
-                                   End  Mobile Menu Dropdown 
-                                    -/-/-/-/-/-/-/-/-/-->
-                             </li>
-                             <li><a href="#">decor</a>
-                                 <!--/-/-/-/-/-/-/-/-/ 
-                                   Begin  Mobile Menu Dropdown 
-                                    -/-/-/-/-/-/-/-/-/-->
-                                 <ul>
-                                     <li><a href="#">art gallery</a>
-                                         <!--/-/-/-/-/-/-/-/-/ 
-                                           Begin  Mobile Menu Sub-Dropdown 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                         <ul>
-                                             <li><a href="categorie-page.html">congue nonorna</a></li>
-                                             <li><a href="categorie-page.html">Etiam sapien</a></li>
-                                             <li><a href="categorie-page.html">Outdoor Lighting</a></li>
-                                             <li><a href="categorie-page.html">sapien enim</a></li>
-                                         </ul>
-                                         <!--/-/-/-/-/-/-/-/-/ 
-                                           End  Mobile Menu Sub-Dropdown 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                     </li>
-                                     <li><a href="#">lighting</a>
-                                         <!--/-/-/-/-/-/-/-/-/ 
-                                           Begin  Mobile Menu Sub-Dropdown 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                         <ul>
-                                             <li><a href="categorie-page.html">commodo nunc</a></li>
-                                             <li><a href="categorie-page.html">elementum dolor</a></li>
-                                             <li><a href="categorie-page.html">ligula velvenen</a></li>
-                                             <li><a href="categorie-page.html">Vestibulum tempor</a></li>
-                                         </ul>
-                                         <!--/-/-/-/-/-/-/-/-/
-                                             End Mobile Menu Sub-Dropdown 
-                                             -/-/-/-/-/-/-/-/-/-->
-                                     </li>
-                                     <li><a href="#">rugs</a>
-                                         <!--/-/-/-/-/-/-/-/-/ 
-                                            Begin Mobile Menu Sub-Dropdown 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                         <ul>
-                                             <li><a href="categorie-page.html">blandit vehicula</a></li>
-                                             <li><a href="categorie-page.html">Praesent molestie</a></li>
-                                             <li><a href="categorie-page.html">sagittis ipsum</a></li>
-                                             <li><a href="categorie-page.html">venenatis innunc</a></li>
-                                         </ul>
-                                         <!--/-/-/-/-/-/-/-/-/ 
-                                            End Mobile Menu Sub-Dropdown 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                     </li>
-                                     <li><a href="#">throw pillows</a>
-                                         <!--/-/-/-/-/-/-/-/-/ 
-                                            Begin Mobile Menu Sub-Dropdown 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                         <ul>
-                                             <li><a href="categorie-page.html">Fire Pits</a></li>
-                                             <li><a href="categorie-page.html">Garden Accents</a></li>
-                                             <li><a href="categorie-page.html">Outdoor Fountains</a></li>
-                                             <li><a href="categorie-page.html">Patio Heaters</a></li>
-                                         </ul>
-                                         <!--/-/-/-/-/-/-/-/-/
-                                             End Mobile Menu Sub-Dropdown 
-                                             -/-/-/-/-/-/-/-/-/-->
-                                     </li>
-                                 </ul>
-                                 <!--/-/-/-/-/-/-/-/-/
-                                     End Mobile Menu Dropdown 
-                                     -/-/-/-/-/-/-/-/-/-->
-                             </li>
-                             <li><a href="#">pages</a>
-                                 <!--/-/-/-/-/-/-/-/-/
-                                     Begin Home Version Dropdown 
-                                     -/-/-/-/-/-/-/-/-/-->
-                                 <ul>
-                                     <li><a href="categorie-page.html">shop</a></li>
-                                     <li><a href="product-page.html">Product Details</a></li>
-                                     <li><a href="cart.html">cart</a></li>
-                                     <li><a href="checkout.html">checkout</a></li>
-                                     <li><a href="wish-list.html">wish list</a></li>
-                                     <li><a href="blog.html">blog</a></li>
-                                     <li><a href="blog-details.html">blog details</a></li>
-                                     <li><a href="contact.html">contact</a></li>
-                                     <li><a href="privacy.html">Privacy Policy</a></li>
-                                     <li><a href="404.html">404</a></li>
-                                 </ul>
-                                 <!--/-/-/-/-/-/-/-/-/
-                                     End Home Version Dropdown 
-                                     -/-/-/-/-/-/-/-/-/-->
-                             </li>
+                                <li><a href="index.html">home</a>
+
+                                </li>
+                                <li><a href="#">LED Tubes<i class="pe-7s-angle-down"></i></a>
+                                    <!--/-/-/-/-/-/-/-/-/ 
+                                       Begin Mega Menu 
+                                       -/-/-/-/-/-/-/-/-/-->
+                                    <ul class="ht-dropdown mega-menu">
+                                        <!--/-/-/-/-/-/-/-/-/ 
+                                           Begin Sub Menu 
+                                           -/-/-/-/-/-/-/-/-/-->
+                                        <li>
+                                            <h3>RGB Lights</h3>
+                                            <ul>
+                                                <li><a href="categorie-page.html">Polyphasic Colored Tubes</a></li>
+               
+                                            </ul>
+                                        </li>
+                                        <!--/-/-/-/-/-/-/-/-/ 
+                                           Begin Single Mega Sub Menu  
+                                           -/-/-/-/-/-/-/-/-/-->
+
+                                        <!--/-/-/-/-/-/-/-/-/ 
+                                          Begin Single Mega Sub Menu 
+                                           -/-/-/-/-/-/-/-/-/-->
+                                        <li>
+                                            <h3>Smart Lights</h3>
+                                            <ul>
+                                                <li><a href="categorie-page.html">Saber Light</a></li>
+                                                <li><a href="categorie-page.html">FLEX LED</a></li>
+                                            </ul>
+                                        </li>
+                                        <!--/-/-/-/-/-/-/-/-/ 
+                                           Single Mega Sub Menu Begin 
+                                           -/-/-/-/-/-/-/-/-/-->
+                                    </ul>
+                                    <!--/-/-/-/-/-/-/-/-/ 
+                                       Mega Menu End 
+                                       -/-/-/-/-/-/-/-/-/-->
+                                </li>
+                               
+                                <li><a href="about-us.html">about us</a></li>
                              <li><a href="about-us.html">about us</a></li>
                          </ul>
                      </nav>

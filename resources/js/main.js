@@ -34,6 +34,7 @@ NOTE: main.js, All custom script and plugin activation script in this file.
  
 ================================================*/
 
+
 (function ($) {
     "use Strict";
     /*----------------------------

@@ -42,7 +42,7 @@
 <!--/-/-/-/-/-/-/-/-/
      Price Slider -
 -/-/-/-/-/-/-/-/-/-->
-<link rel="stylesheet" href="{{asset('css/priceslider.css')}}">
+<link rel="stylesheet" href="{{asset('css/jqui.css')}}">
 <!--/-/-/-/-/-/-/-/-/
      FA 
 -/-/-/-/-/-/-/-/-/-->
