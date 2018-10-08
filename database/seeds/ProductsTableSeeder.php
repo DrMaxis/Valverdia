@@ -13,107 +13,172 @@ class ProductsTableSeeder extends Seeder
     public function run()
     {
         Product::create([
-            'name' => 'Modern U shaped Wooden Floating Wall Shelf',
-            'slug' => 'U-Shaped-Wall-Shelf',
-            'details' => 'Modern Wooden U Shaped Wall Shelf',
+            'name' => 'Red Colored LED Tube ',
+            'slug' => 'red-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 150000 ,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
         ]);
          Product::create([
-            'name' => 'Modern Simplistic Floating Book Shelf',
-            'slug' => 'Modern-Floating-Book-Shelf',
-            'details' => 'Modern Floating Book Shelf',
+            'name' => 'Blue Colored LED Tube ',
+            'slug' => 'blue-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
         ]);
          Product::create([
-            'name' => 'Hexagon Modern Wooden Decorative Wall Shelf',
-            'slug' => 'Hexagon-Shelf',
-            'details' => 'Modern Hexagon Wooden Sheld',
+            'name' => 'Green Colored LED Tube ',
+            'slug' => 'green-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
         ]);
          Product::create([
-            'name' => 'Floating Round Wall Shelf',
-            'slug' => 'Round-Wall-Shelf',
-            'details' => 'Floating round decorative Wall Shelf',
+            'name' => 'Yellow Colored LED Tube ',
+            'slug' => 'yellow-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
         ]);
          Product::create([
-            'name' => 'Wooden Full Wall Shelf',
-            'slug' => 'Full-Wall-Shelf',
-            'details' => 'Large Wall Wooden Shelf',
+            'name' => 'Orange Colored LED Tube ',
+            'slug' => 'orange-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
         ]);
          Product::create([
-            'name' => 'Walnut 2-Tier Wooden Book Shelf',
-            'slug' => 'Wooden-Book-Shelf',
-            'details' => 'Walnut 2-Tier Wooden Book Shelf',
+            'name' => 'Purple Colored LED Tube ',
+            'slug' => 'purple-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
         ]);
          Product::create([
-            'name' => 'EntryWay Wooden Cube Shelf With 3 Hooks',
-            'slug' => 'Three-Hook-Shelf',
-            'details' => 'Three Hook Wooden Cube Shelf with 3 Hooks for Hanging',
+            'name' => 'Cyan Colored LED Tube ',
+            'slug' => 'cyan-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
         ]);
          Product::create([
-            'name' => 'Bamboo Coffee Table',
-            'slug' => 'Portable-Coffee-Table',
-            'details' => 'Small Portable And Collapsible Bambo Coffee Table',
+            'name' => 'Magenta Colored LED Tube ',
+            'slug' => 'magenta-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
         ]);
          Product::create([
-            'name' => 'Small Round Tea Accent Table Set',
-            'slug' => 'Round-Tea-Table',
-            'details' => 'Small Round Wooden Accent Tea Table Set of 2',
+            'name' => 'Lime Colored LED Tube ',
+            'slug' => 'lime-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
         ]);
         Product::create([
-            'name' => 'Three Legged Living Room Coffee Table',
-            'slug' => 'Triagle-Coffee-Table',
-            'details' => 'Trigangle Shaped Living Room Classic Coffee Table',
+            'name' => 'Pink Colored LED Tube ',
+            'slug' => 'pink-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
         ]);
         Product::create([
-            'name' => 'Modern Round Classic Wooden Coffee Table',
-            'slug' => 'Modern-Round-Coffee-Table',
-            'details' => 'Modern Round Wooden Coffee Table',
+            'name' => 'Teal Colored LED Tube ',
+            'slug' => 'teal-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
         ]);
         Product::create([
-            'name' => 'Modern Wooden Organizer with Accent',
-            'slug' => 'Wooden-Organizer',
-            'details' => 'Modern Wood Organizer with White Accent',
+            'name' => 'Lavender Colored LED Tube ',
+            'slug' => 'lavender-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
         ]);
         Product::create([
-            'name' => 'Modern Wood Storage Cabinet',
-            'slug' => 'Wooden-Storage-Cabinet',
-            'details' => 'Modern High-Quality Wood Storage Cabinet',
+            'name' => 'Brown Colored LED Tube ',
+            'slug' => 'brown-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
         ]);
         Product::create([
-            'name' => 'Modern Wooden TV stand & Chest',
-            'slug' => 'Wooden-Tv-Stand',
-            'details' => 'Moden Wooden TV Stand with Chest for Living and Bedroom',
+            'name' => 'Beige Colored LED Tube ',
+            'slug' => 'beige-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
         ]);
         Product::create([
-            'name' => 'Enviromental Modern Living Room Tea Table',
-            'slug' => 'Enviromental-Tea-Table',
-            'details' => 'Modern Enviromental Wooden Tea Table with White Accent',
+            'name' => 'Maroon Colored LED Tube ',
+            'slug' => 'maroon-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
+            'price' => 149999,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
+        ]);
+        Product::create([
+            'name' => 'Mint Colored LED Tube ',
+            'slug' => 'mint-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
+            'price' => 149999,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
+        ]);
+        Product::create([
+            'name' => 'Olive Colored LED Tube ',
+            'slug' => 'olive-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
+            'price' => 149999,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
+        ]);
+        Product::create([
+            'name' => 'Apricot Colored LED Tube ',
+            'slug' => 'apricot-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
+            'price' => 149999,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
+        ]);
+        Product::create([
+            'name' => 'Navy Colored LED Tube ',
+            'slug' => 'navy-colored-led-tube',
+            'details' => 'High Quality and Efficient Colored LED Tube',
+            'price' => 149999,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
+        ]);
+
+        Product::create([
+            'name' => 'RGB Color Changing FLEX LED',
+            'slug' => 'rgb-flex-led',
+            'details' => 'High Quality and Efficient Color Changing FLEX LED with Adhesive',
+            'price' => 149999,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
+        ]);
+
+        Product::create([
+            'name' => 'Colored LED Tube bundle (2x)',
+            'slug' => 'led-tube-bundle',
+            'details' => 'A set of two Customizeable Colored LED Tubes',
+            'price' => 149999,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
+        ]);
+        Product::create([
+            'name' => 'Colored LED Tube bundle (3x)',
+            'slug' => 'led-tube-bundle',
+            'details' => 'A set of three Customizeable Colored LED Tubes',
+            'price' => 149999,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
+        ]);
+        Product::create([
+            'name' => 'Colored LED Tube bundle (4x)',
+            'slug' => 'led-tube-bundle',
+            'details' => 'A set of four Customizeable Colored LED Tubes',
+            'price' => 149999,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
+        ]);
+        Product::create([
+            'name' => 'Colored LED Tube bundle (5x)',
+            'slug' => 'led-tube-bundle',
+            'details' => 'A set of five Customizeable Colored LED Tubes',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
         ]);

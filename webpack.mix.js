@@ -46,7 +46,9 @@ mix
 .js('resources/js/main.js', 'public/js')
 .js('resources/js/owl.carousel.min.js', 'public/js')
 .js('resources/js/plugins.js', 'public/js')
-.js('resources/js/wow.min.js', 'public/js');
+.js('resources/js/wow.min.js', 'public/js')
+.js('resources/js/wave.js', 'public/js');
+
 
 
 

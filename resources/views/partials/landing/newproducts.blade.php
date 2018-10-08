@@ -1,81 +1,110 @@
 <!--/-/-/-/-/-/-/-/-/
     Begin New & Featured Products
--/-/-/-/-/-/-/-/-/-/-/-/-/-->
-<div class="new-products-banner pb-100">
+-/-/-/-/-/-/-/-/-/-->
+    <div class="new-products-banner pb-100">
         <div class="container">
-            <div class="row">
+            <div class="row mb-100">
                 <!--/-/-/-/-/-/-/-/-/ 
-                    Start Single Banner 
-                -/-/-/-/-/-/-/-/-/-/-/-->
-                <div class="col-sm-4">
-                    <div class="single-banner zoom mb-30">
-                        <img src="img/products-banner/1.jpg" alt="product-banner">
-                        <div class="banner-desc">
-                            <a href="categorie-page.html">Decorative Accessories</a>
-                            <p>25 products</p>
-                        </div>
+                    Begin Single Banner  
+                -/-/-/-/-/-/-/-/-/-->
+                <div class="col-sm-6">
+                    <div class="single-banner">
+                        <a href="#"><img src="img/products-banner/10.jpg" alt="product-banner"></a>
                     </div>
                 </div>
                 <!--/-/-/-/-/-/-/-/-/ 
-                    End Single Banner
-                -/-/-/-/-/-/-/-/-/-/-/-->
+                    End Single Banner  
+                -/-/-/-/-/-/-/-/-/-->
 
                 <!--/-/-/-/-/-/-/-/-/ 
-                    Start Single Banner
-                -/-/-/-/-/-/-/-/-/-/-/-->
-                <div class="col-sm-8">
-                    <div class="single-banner zoom mb-30">
-                        <img src="img/products-banner/2.jpg" alt="product-banner">
-                        <div class="banner-desc">
-                            <a href="categorie-page.html">Chairs & Recliners</a>
-                            <p>25 products</p>
+                    Begin Single Banner  
+                -/-/-/-/-/-/-/-/-/-->
+                <div class="col-sm-6">
+                    <div class="single-banner">
+                        <div class="banner-description">
+                            <h3>Chandeliers & Pendants</h3>
+                            <h5>Extra 10% off Select Lingting</h5>
+                            <a href="categorie-page.html">shop now</a>
                         </div>
                     </div>
                 </div>
                 <!--/-/-/-/-/-/-/-/-/ 
                     End Single Banner 
-                -/-/-/-/-/-/-/-/-/-/-/-->
-
-                <!--/-/-/-/-/-/-/-/-/ 
-                    Start Single Banner 
-                -/-/-/-/-/-/-/-/-/-/-/-->
-                <div class="col-sm-8">
-                    <div class="single-banner zoom">
-                        <img src="img/products-banner/3.jpg" alt="product-banner">
-                        <div class="banner-desc">
-                            <a href="categorie-page.html">Sofas & Loveseats</a>
-                            <p>25 products</p>
-                        </div>
-                    </div>
-                </div>
-                <!--/-/-/-/-/-/-/-/-/ 
-                    End Single Banner 
-                    -/-/-/-/-/-/-/-/-/-/-/-->
-
-                <!--/-/-/-/-/-/-/-/-/ 
-                    Start Single Banner 
-                    -/-/-/-/-/-/-/-/-/-/-/-->
-                <div class="col-sm-4">
-                    <div class="single-banner zoom">
-                        <img src="img/products-banner/4.jpg" alt="product-banner">
-                        <div class="banner-desc">
-                            <a href="categorie-page.html">Window Treatments</a>
-                            <p>25 products</p>
-                        </div>
-                    </div>
-                </div>
-                <!--/-/-/-/-/-/-/-/-/ 
-                    End Single Banner 
-                -/-/-/-/-/-/-/-/-/-/-/-->
+                -/-/-/-/-/-/-/-/-/-->   
             </div>
             <!--/-/-/-/-/-/-/-/-/ 
                 End Row 
-            -/-/-/-/-/-/-/-/-/-/-/-->
+            -/-/-/-/-/-/-/-/-/-->
+            <div class="row">
+                <!--/-/-/-/-/-/-/-/-/ 
+                    Begin Single Banner 
+                -/-/-/-/-/-/-/-/-/-->
+                <div class="col-sm-6">
+                    <div class="single-banner">
+                        <div class="banner-description">
+                            <h3>Home Decor</h3>
+                            <h5>Sale 30% Off</h5>
+                            <a href="categorie-page.html">shop now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--/-/-/-/-/-/-/-/-/ 
+                    End Single Banner 
+                -/-/-/-/-/-/-/-/-/-->
+
+                <!--/-/-/-/-/-/-/-/-/ 
+                    Begin Single Banner 
+                -/-/-/-/-/-/-/-/-/-->
+                <div class="col-sm-6">
+                    <div class="single-banner">
+                        <a href="#"><img src="img/products-banner/11.jpg" alt="product-banner"></a>
+                    </div>
+                </div>
+                <!--/-/-/-/-/-/-/-/-/ 
+                    End Single Banner 
+                -/-/-/-/-/-/-/-/-/-->
+            </div>
+            <!--/-/-/-/-/-/-/-/-/ 
+                End Row 
+            -/-/-/-/-/-/-/-/-/-->
+
+            <div class="row mb-100">
+                <!--/-/-/-/-/-/-/-/-/ 
+                    Begin Single Banner  
+                -/-/-/-/-/-/-/-/-/-->
+                <div class="col-sm-6">
+                    <div class="single-banner">
+                        <a href="#"><img src="img/products-banner/10.jpg" alt="product-banner"></a>
+                    </div>
+                </div>
+                <!--/-/-/-/-/-/-/-/-/ 
+                    End Single Banner  
+                -/-/-/-/-/-/-/-/-/-->
+
+                <!--/-/-/-/-/-/-/-/-/ 
+                    Begin Single Banner  
+                -/-/-/-/-/-/-/-/-/-->
+                <div class="col-sm-6">
+                    <div class="single-banner">
+                        <div class="banner-description">
+                            <h3>Chandeliers & Pendants</h3>
+                            <h5>Extra 10% off Select Lingting</h5>
+                            <a href="categorie-page.html">shop now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--/-/-/-/-/-/-/-/-/ 
+                    End Single Banner 
+                -/-/-/-/-/-/-/-/-/-->   
+            </div>
+            <!--/-/-/-/-/-/-/-/-/ 
+                End Row 
+            -/-/-/-/-/-/-/-/-/-->
         </div>
         <!--/-/-/-/-/-/-/-/-/ 
             End Container 
-        -/-/-/-/-/-/-/-/-/-/-/-->
+        -/-/-/-/-/-/-/-/-/-->
     </div>
-    <!--/-/-/-/-/-/-/-/-/
-    End New & Featured Products
--/-/-/-/-/-/-/-/-/-/-/-/-/-->
+    <!--/-/-/-/-/-/-/-/-/ 
+        End New Products Banner 
+    -/-/-/-/-/-/-/-/-/-->

@@ -294,20 +294,6 @@ NOTE: main.js, All custom script and plugin activation script in this file.
         galleryActiveClass: "active"
     });
 
-    /*----------------------------
-    12. Price Slider Activation
-    -----------------------------*/
-    $("#slider-range").slider({
-        range: true,
-        min: 80,
-        max: 2000,
-        values: [0, 2000],
-        slide: function slide(event, ui) {
-            $("#amount").val("$" + ui.values[0] + "  $" + ui.values[1]);
-        }
-    });
-    $("#amount").val("$" + $("#slider-range").slider("values", 0) + "  $" + $("#slider-range").slider("values", 1));
-
     /*-------------------------------------
     13. Most Viewd Product activation
     --------------------------------------*/

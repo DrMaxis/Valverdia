@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 
 Route::get('/', 'LandingPageController@index')->name('home');
+Route::get('/leds', 'ProductsPageController@index')->name('shop');
 /* Route::view('/products', 'products');
 Route::view('/product', 'product');
 Route::view('cart', 'cart');

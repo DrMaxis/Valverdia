@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Product;
+use App\Color;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,5 +14,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(ProductsTableSeeder::class);
+        $this->call(ColorsTableSeeder::class);
     }
 }

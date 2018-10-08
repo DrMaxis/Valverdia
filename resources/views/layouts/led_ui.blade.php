@@ -18,7 +18,6 @@
         <div class="wrapper"> 
             
         @include('partials.preloader')
-        @include('partials.newsPopup')
         @include('inc.header')
         @yield('content')
 
@@ -32,6 +31,7 @@
 
 	
 @include('inc.footer')
+@include('inc.led_quickview')
 </div>
 <!--/-/-/-/-/-/-/-/-/
     End UI-Container  
