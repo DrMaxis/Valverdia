@@ -13,7 +13,18 @@ class ProductsPageController extends Controller
         $colors = Color::all();
         $products = Product::all();
         $data = array('colors' => $colors, 'products' => $products);
-        return view('leds')->with($data);
+        return view('products')->with($data);
         
+    }
+
+
+
+    public function show($slug) {
+        $product = Product::where('slug', $slug)->firstOrFail();
+        $popular = Product::where('slug', '!=', $slug)->inRandomOrder()->take(3)->get();
+        return view('singleProduct')->with([
+            'product' => $product,
+            'popular' => $popular,
+            ]);
     }
 }

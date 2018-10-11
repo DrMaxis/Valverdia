@@ -106,8 +106,7 @@
                              <!--/-/-/-/-/-/-/-/-/ 
                                 End Search Box 
                                 -/-/-/-/-/-/-/-/-/-->
-                             <li><a href="wish-list.html"><i class="pe-7s-like"></i><span>2</span></a></li>
-                             <li><i class="pe-7s-shopbag"></i><span>2</span>
+                             <li><a href="{{route('cart')}}"><i class="pe-7s-shopbag"></i><span>2</span></a>
                                  <ul class="ht-dropdown main-cart-box">
                                      <li>
                                          <!--/-/-/-/-/-/-/-/-/ 

@@ -17,7 +17,11 @@ Route::get('/', function () {
 
 
 Route::get('/', 'LandingPageController@index')->name('home');
-Route::get('/leds', 'ProductsPageController@index')->name('leds');
+Route::get('/products', 'ProductsPageController@index')->name('products');
+Route::get('/products/{product}', 'ProductsPageController@show')->name('single-product');
+Route::get('/cart', 'CartController@index')->name('cart');
+Route::post('/cart', 'CartController@store')->name('add-to-cart');
+
 /* Route::view('/products', 'products');
 Route::view('/product', 'product');
 Route::view('cart', 'cart');
