@@ -1,4 +1,4 @@
-@extends('layouts.led_ui') 
+@extends('layouts.products_ui') 
 @section('content') 
     {{-- Title --}}
     @include('partials.products.title')

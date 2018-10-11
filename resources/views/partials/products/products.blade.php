@@ -121,9 +121,12 @@
                                         <div class="pro-content text-center">
                                             <h4><a href="{{route('single-product', $product->slug)}}">{{$product->name}}</a></h4>
                                             <p class="price"><span>{{$product->convertToUSD()}}</span></p>
-                                            <div class="action-links2">
-                                                <a data-toggle="tooltip" title="" href="cart.html" data-original-title="Add to Cart">add to cart</a>
-                                            </div>
+                                            <form class="action-links2" action="{{route('add-to-cart')}}" method="POST">
+                                                @csrf
+                                                <input type="hidden" name="id" value="{{$product->id}}">
+                                                <input type="hidden" name="name" value="{{$product->name}}">
+                                                <input type="hidden" name="price" value="{{$product->price}}">
+                                                <button data-toggle="tooltip"  type="submit"data-original-title="Add to Cart">add to cart</button> 
                                         </div>
                                         <!-- Product Content End -->
                                     </div>
@@ -131,6 +134,7 @@
                                 </div>
                                 @endforeach
                                 @endif
+                                
 
                               
                             </div>
