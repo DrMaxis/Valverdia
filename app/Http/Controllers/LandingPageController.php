@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Prodcut;
+use App\Product;
+use App\Color;
 
 class LandingPageController extends Controller
 {
@@ -12,9 +13,11 @@ class LandingPageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('landing');
+    public function index() {
+        $colors = Color::all();
+        $products = Product::all();
+        $data = array('colors' => $colors, 'products' => $products);
+        return view('landing')->with($data);
     }
 
     /**

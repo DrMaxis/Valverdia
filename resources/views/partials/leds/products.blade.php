@@ -19,34 +19,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-5 pull-right">
-                    <select name="shorer" id="shorter" class="form-control select-varient">
-                        <option value="#">Sort By:Default</option>
-                        <option value="#">Sort By:Name (A - Z)</option>
-                        <option value="#">Sort By:Name (Z - A)</option>
-                        <option value="#">Sort By:Price (Low &gt; High)</option>
-                        <option value="#">Sort By:Price (High &gt; Low)</option>
-                        <option value="#">Sort By:Rating (Highest)</option>
-                        <option value="#">Sort By:Rating (Lowest)</option>
-                        <option value="#">Sort By:Model (A - Z)</option>
-                        <option value="#">Sort By:Model (Z - A)</option>
-                    </select>
-                </div>
-                <div class="col-md-3 col-sm-3 pull-right">
-                    <select name="shorter" id="#" class="form-control select-varient">
-                        <option value="#">Show: 9</option>
-                        <option value="#">Show: 25</option>
-                        <option value="#">Show: 50</option>
-                        <option value="#">Show: 75</option>
-                        <option value="#">Show: 100</option>
-                   </select>
-                </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
                     <div class="tab-content categorie-list ">
                         <div id="list-view" class="tab-pane fade">
                             <div class="row">
+                                    @if(count($products) > 0)
+    
+    
+                                    @foreach($products as $product)
                                 <!-- Main Single Product Start -->
                                 <div class="main-single-product fix">
                                     <div class="col-sm-4">
@@ -55,12 +37,11 @@
                                             <!-- Product Image Start -->
                                             <div class="pro-img">
                                                 <a href="product-page.html">
-                                                    <img class="primary-img" src="img/new-products/2_1.jpg" alt="single-product">
+                                                    <img class="primary-img" src="#" alt="single-product">
                                                 </a>
                                                 <div class="quick-view">
                                                     <a href="#" data-toggle="modal" data-target="#myModal"><i class="pe-7s-look"></i>quick view</a>
                                                 </div>
-                                                <span class="sticker-new">new</span>
                                             </div>
                                             <!-- Product Image End -->
                                         </div>
@@ -69,13 +50,13 @@
                                     <div class="col-sm-8">
                                         <!-- Product Content Start -->
                                         <div class="thubnail-desc fix">
-                                            <h4 class="product-header"><a href="product-page.html">Carte Postal Clock</a></h4>
+                                            <h4 class="product-header"><a href="product-page.html">{{$product->name}}</a></h4>
                                             <!-- Product Price Start -->
                                             <div class="pro-price mb-15">
                                                 <ul class="pro-price-list">
-                                                    <li class="price">$122.00</li>
+                                                    <li class="price">{{$product->price}}</li>
                                                     <li class="mtb-50">
-                                                        <p>Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge w..</p>
+                                                        <p>{{$product->description}}</p>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -91,7 +72,11 @@
                                         <!-- Product Content End -->
                                     </div>
                                 </div>
-                                <!-- Main Single Product Start -->
+                                @endforeach
+                                @endif
+
+
+                              {{--   <!-- Main Single Product Start -->
                                 <!-- Main Single Product Start -->
                                 <div class="main-single-product fix">
                                     <div class="col-sm-4">
@@ -406,7 +391,7 @@
                                         <!-- Product Content End -->
                                     </div>
                                 </div>
-                                <!-- Main Single Product Start -->
+                                <!-- Main Single Product Start --> --}}
                             </div>
                             <!-- Row End -->
                             <div class="row mt-40 mb-70">

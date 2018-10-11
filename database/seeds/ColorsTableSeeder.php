@@ -14,7 +14,7 @@ class ColorsTableSeeder extends Seeder
     {
         Color::create([
             'color' => 'Red',
-            'showcase_img' => '#',
+            'showcase_img' => 'bloodroom.jpg',
             'product_1_name' => 'Colored Led Tube',
             'product_2_name' => 'RGB Flex LED',
             'product_1_spec' => '#',
@@ -22,7 +22,7 @@ class ColorsTableSeeder extends Seeder
         ]);
         Color::create([
             'color' => 'Green',
-            'showcase_img' => '#',
+            'showcase_img' => 'apothocary.jpg',
             'product_1_name' => 'Colored Led Tube',
             'product_2_name' => 'RGB Flex LED',
             'product_1_spec' => '#',
@@ -30,13 +30,13 @@ class ColorsTableSeeder extends Seeder
         ]);
         Color::create([
             'color' => 'Blue',
-            'showcase_img' => '#',
+            'showcase_img' => 'enile.jpg',
             'product_1_name' => 'Colored Led Tube',
             'product_2_name' => 'RGB Flex LED',
             'product_1_spec' => '#',
             'product_2_spec' => '#',
         ]);
-        Color::create([
+        /* Color::create([
             'color' => 'Yellow',
             'showcase_img' => '#',
             'product_1_name' => 'Colored Led Tube',
@@ -164,6 +164,6 @@ class ColorsTableSeeder extends Seeder
             'product_1_spec' => '#',
             'product_2_spec' => '#',
         ]);
-
+ */
     }
 }

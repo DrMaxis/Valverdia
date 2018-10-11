@@ -33,7 +33,35 @@ class ProductsTableSeeder extends Seeder
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
         ]);
-         Product::create([
+       
+        Product::create([
+            'name' => 'RGB Color Changing FLEX LED',
+            'slug' => 'rgb-flex-led',
+            'details' => 'High Quality and Efficient Color Changing FLEX LED with Adhesive',
+            'price' => 149999,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
+        ]);
+
+        Product::create([
+            'name' => 'Colored LED Tube bundle (2x)',
+            'slug' => 'two-colored-led-tubes',
+            'details' => 'A set of two Customizeable Colored LED Tubes',
+            'price' => 149999,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
+        ]);
+        Product::create([
+            'name' => 'Colored LED Tube bundle (3x)',
+            'slug' => 'three-colored-led-tubes',
+            'details' => 'A set of three Customizeable Colored LED Tubes',
+            'price' => 149999,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
+        ]);
+
+        /**
+         *  Future Products
+         */
+
+      /* Product::create([
             'name' => 'Yellow Colored LED Tube ',
             'slug' => 'yellow-colored-led-tube',
             'details' => 'High Quality and Efficient Colored LED Tube',
@@ -144,31 +172,10 @@ class ProductsTableSeeder extends Seeder
             'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-        ]);
-
-        Product::create([
-            'name' => 'RGB Color Changing FLEX LED',
-            'slug' => 'rgb-flex-led',
-            'details' => 'High Quality and Efficient Color Changing FLEX LED with Adhesive',
-            'price' => 149999,
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-        ]);
-
-        Product::create([
-            'name' => 'Colored LED Tube bundle (2x)',
-            'slug' => 'led-tube-bundle',
-            'details' => 'A set of two Customizeable Colored LED Tubes',
-            'price' => 149999,
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-        ]);
-        Product::create([
-            'name' => 'Colored LED Tube bundle (3x)',
-            'slug' => 'led-tube-bundle',
-            'details' => 'A set of three Customizeable Colored LED Tubes',
-            'price' => 149999,
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-        ]);
-        Product::create([
+        ]); */   
+        
+        
+        /* Product::create([
             'name' => 'Colored LED Tube bundle (4x)',
             'slug' => 'led-tube-bundle',
             'details' => 'A set of four Customizeable Colored LED Tubes',
@@ -181,7 +188,7 @@ class ProductsTableSeeder extends Seeder
             'details' => 'A set of five Customizeable Colored LED Tubes',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-        ]);
+        ]); */
     
     }
 }
