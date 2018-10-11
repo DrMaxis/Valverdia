@@ -63,10 +63,17 @@
                                             <!-- Product Price End -->
                                             <!-- Product Button Actions Start -->
                                             <div class="product-button-actions">
-                                                <button class="add-to-cart" data-toggle="tooltip" title="" data-original-title="Add to Cart">add to cart</button>
-                                                <a href="wish-list.html" data-toggle="tooltip" title="" class="same-btn mr-15" data-original-title="Add to Wishlist"><i class="pe-7s-like"></i></a>
-                                                <button data-toggle="tooltip" title="" class="same-btn" data-original-title="Compare this Product"><i class="pe-7s-repeat"></i></button>
+                                                   
+                                                    <form action="{{ route('add-to-cart') }}" method="POST">
+                                                       @csrf
+                                                       <input type="hidden" name="id" value="{{$product->id}}">
+                                                       <input type="hidden" name="name" value="{{$product->name}}">
+                                                       <input type="hidden" name="price" value="{{$product->price}}">
+                                                        <button type="submit" class="button button-plain">Add to Cart</button>
+                                                    </form>
                                             </div>
+
+                                        
                                             <!-- Product Button Actions End -->
                                         </div>
                                         <!-- Product Content End -->

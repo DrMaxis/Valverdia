@@ -23,6 +23,7 @@
                         <!--/-/-/-/-/-/-/-/-/ 
                             Begin Table Content 
                         -/-/-/-/-/-/-/-/-/-/-/-->
+                        
                         <div class="table-content table-responsive mb-50">
                             <table>
                                 <thead>
@@ -37,25 +38,36 @@
                                 </thead>
                                 <tbody>
                                     <tr>
+                                            @if (Cart::count() > 0)
+                                            @foreach (Cart::content() as $item)
                                         <td class="product-thumbnail">
-                                            <a href="#"><img src="img/new-products/2_2.jpg" alt="cart-image" /></a>
+                                            <a href="{{ route('single-product', $item->model->slug) }}"><img src="img/new-products/2_2.jpg" alt="cart-image" /></a>
                                         </td>
-                                        <td class="product-name"><a href="#">dictum idrisus</a></td>
-                                        <td class="product-price"><span class="amount">£165.00</span></td>
+                                        <td class="product-name"><a href="{{ route('single-product', $item->model->slug) }}">{{$item->model->name}}</a></td>
+                                        <td class="product-price"><span class="amount">{{$item->model->price}}</span></td>
                                         <td class="product-quantity"><input type="number" value="1" /></td>
-                                        <td class="product-subtotal">£165.00</td>
-                                        <td class="product-remove"> <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="product-thumbnail">
-                                            <a href="#"><img src="img/new-products/6_2.jpg" alt="cart-image" /></a>
+                                        <td class="product-subtotal">{{$item->model->price}}</td>
+                                        <td>
+                                            <form class="product-remove" action="{{ route('cart.destroy', $item->rowId) }}" method="POST">
+                                                    @csrf
+                                                    {{ method_field('DELETE') }}
+                    
+                                                    <button type="submit">Remove</button>
+                                                </form>
+                    
                                         </td>
-                                        <td class="product-name"><a href="#">Carte Postal Clock</a></td>
-                                        <td class="product-price"><span class="amount">£50.00</span></td>
-                                        <td class="product-quantity"><input type="number" value="1" /></td>
-                                        <td class="product-subtotal">£50.00</td>
-                                        <td class="product-remove"> <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></td>
                                     </tr>
+
+                                    @endforeach
+
+                                    @else
+
+                                    <h3>No items in Cart!</h3>
+                                    <div class="spacer"></div>
+                                    <a href="{{ route('products') }}" class="button">Continue Shopping</a>
+                                    <div class="spacer"></div>
+                    
+                                    @endif
                                 </tbody>
                             </table>
                         </div>
@@ -69,7 +81,7 @@
                             <div class="col-md-8 col-sm-7 col-xs-12">
                                 <div class="buttons-cart">
                                     <input type="submit" value="Update Cart" />
-                                    <a href="#">Continue Shopping</a>
+                                    <a href="{{ route('products') }}">Continue Shopping</a>
                                 </div>
                             </div>
                             <!--/-/-/-/-/-/-/-/-/ 
@@ -86,13 +98,13 @@
                                     <table>
                                         <tbody>
                                             <tr class="cart-subtotal">
-                                                <th>Subtotal</th>
-                                                <td><span class="amount">$215.00</span></td>
+                                                <th>Tax</th>
+                                                <td><span class="amount">{{Cart::tax()}}</span></td>
                                             </tr>
                                             <tr class="order-total">
                                                 <th>Total</th>
                                                 <td>
-                                                    <strong><span class="amount">$215.00</span></strong>
+                                                    <strong><span class="amount">{{Cart::total()}}</span></strong>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -106,6 +118,8 @@
                                 End Cart Totals 
                             -/-/-/-/-/-/-/-/-/-/-/-->
                         </div>
+
+              
                         <!--/-/-/-/-/-/-/-/-/ 
                             End Row  
                         -/-/-/-/-/-/-/-/-/-/-/-->

@@ -1,4 +1,4 @@
-@extends('layouts.ui')
+@extends('layouts.products_ui')
 @section('content')
 @include('partials.cart.title')
 

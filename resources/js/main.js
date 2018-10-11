@@ -283,10 +283,7 @@ NOTE: main.js, All custom script and plugin activation script in this file.
         }
     })
     
-    /*----------------------------
-    16. WOW Js Activation
-    -----------------------------*/
-    new WOW().init();
+  
     
     /*----------------------------
     17. Checkout Page Activation

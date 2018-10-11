@@ -21,7 +21,17 @@ Route::get('/products', 'ProductsPageController@index')->name('products');
 Route::get('/products/{product}', 'ProductsPageController@show')->name('single-product');
 Route::get('/cart', 'CartController@index')->name('cart');
 Route::post('/cart', 'CartController@store')->name('add-to-cart');
+Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
+Route::get('/checkout', 'CheckoutController@index')->name('checkout');
 
+
+
+
+
+
+Route::get('empty', function() {
+    Cart::destroy();
+});
 /* Route::view('/products', 'products');
 Route::view('/product', 'product');
 Route::view('cart', 'cart');
