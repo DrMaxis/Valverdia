@@ -9,3 +9,5 @@
 {{-- Checkout Area Table --}}
 @include('partials.checkout.checkoutarea')
 @endsection
+
+@section('xtra-js')
