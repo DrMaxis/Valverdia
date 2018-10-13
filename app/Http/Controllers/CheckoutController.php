@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Gloudemans\Shoppingcart\Facades\Cart;
+use Cartalyst\Stripe\Laravel\Facades\Stripe;
+use Cartalyst\Stripe\Exception\CardErrorException;
+use App\Product;
+use App\Color;
+
 
 class CheckoutController extends Controller
 {
@@ -15,6 +21,21 @@ class CheckoutController extends Controller
     {
        return view('checkout');
     }
+
+
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+     public function confirm() {
+         if (! session()->has('success_message')) {
+            return redirect('/');
+         }
+
+         return view('thankyou');
+     }
 
     /**
      * Show the form for creating a new resource.
@@ -34,8 +55,32 @@ class CheckoutController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $contents = Cart::content()->map(function ($item) {
+            return $item->model->slug.','.$item->qty;
+        })->values()->toJson();
+        try {
+            $charge = Stripe::charges()->create([
+                'amount' => Cart::total(),
+                'currency' => 'USD',
+                'source' => $request->stripeToken,
+                'description' => 'Order',
+                'receipt_email' => $request->email,
+                'metadata' => [
+                    'contents' => $contents,
+                    'quantity' => Cart::instance('default')->count()
+                ],
+            ]);
+
+            //Success
+
+            Cart:: instance('default')->destroy();
+
+        return redirect()->route('confirm-purchase')->with('success_message', 'Thank You! Your Order Has Been Placed!');
+    } catch (CardErrorException $e) {
+        return back()->withErrores('Error '. $e->getMessage());
     }
+}
 
     /**
      * Display the specified resource.

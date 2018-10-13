@@ -134,6 +134,7 @@
                                                 <input type="hidden" name="name" value="{{$product->name}}">
                                                 <input type="hidden" name="price" value="{{$product->price}}">
                                                 <button data-toggle="tooltip"  type="submit"data-original-title="Add to Cart">add to cart</button> 
+                                            </form>
                                         </div>
                                         <!-- Product Content End -->
                                     </div>

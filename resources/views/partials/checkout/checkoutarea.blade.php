@@ -5,7 +5,7 @@ Begin Checkoutarea
 <div class="checkout-area pt-30">
         <div class="container">
             <div class="row">
-                    <form action="{{-- {{route('checkout-confirm')}} --}}" method="POST" id="payment-form">
+                    <form action="{{route('checkout-send')}}" method="POST" id="payment-form">
                             @csrf
                     <div class="col-lg-6 col-md-6">
                         <div class="checkbox-form pb-50">
@@ -26,7 +26,7 @@ Begin Checkoutarea
                                         <div class="col-md-6">
                                         <div class="checkout-form-list mb-30">
                                                 <label>Name On Card <span class="required">*</span></label>
-                                                <input type="text" placeholder="Name on Card" id="name-on-card" name="name-on-card"  value="{{old('name')}}"  required>
+                                                <input type="text" placeholder="Name on Card" id="nameOnCard" name="nameOnCard"  value="{{old('nameOnCard')}}"  required>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -90,31 +90,31 @@ Begin Checkoutarea
                                         <div class="col-md-6">
                                                 <div class="checkout-form-list mb-30">
                                                     <label>First Name <span class="required">*</span></label>
-                                                    <input type="text" placeholder="First Name" name="name" value="{{ old('name') }}" required>
+                                                    <input type="text" placeholder="First Name"  value="{{ old('name') }}" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="checkout-form-list mb-30">
                                                     <label>Last Name <span class="required">*</span></label>
-                                                    <input type="text" placeholder="Last Name" name="lastname" value="{{ old('lastname') }}" required>
+                                                    <input type="text" placeholder="Last Name"  value="{{ old('lastname') }}" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                             <div class="checkout-form-list mb-30">
                                                     <label>Name On Card <span class="required">*</span></label>
-                                                    <input type="text" placeholder="Name on Card" name="name-on-card" value="{{old('name')}}"  required>
+                                                    <input type="text" placeholder="Name on Card"  value="{{old('name')}}"  >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="checkout-form-list mb-30">
                                                     <label>Email Address <span class="required">*</span></label>
-                                                    <input type="email" placeholder="Email"  name="email" value="{{ old('email') }}" required>
+                                                    <input type="email" placeholder="Email"   value="{{ old('email') }}" >
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkout-form-list mb-30">
                                                     <label>Address <span class="required">*</span></label>
-                                                    <input type="text" placeholder="Street address" name="address" value="{{old('address')}}" required>
+                                                    <input type="text" placeholder="Street address"  value="{{old('address')}}" >
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
@@ -125,19 +125,19 @@ Begin Checkoutarea
                                             <div class="col-md-12">
                                                 <div class="checkout-form-list mb-30">
                                                     <label>Town / City <span class="required">*</span></label>
-                                                    <input type="text" placeholder="Town / City" name="city" value="{{ old('city') }}" required>
+                                                    <input type="text" placeholder="Town / City"  value="{{ old('city') }}" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="checkout-form-list mb-30">
                                                     <label>State / County <span class="required">*</span></label>
-                                                    <input type="text" placeholder="State" name="state" value="{{ old('state') }}" required>
+                                                    <input type="text" placeholder="State" value="{{ old('state') }}" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="checkout-form-list mb-30">
                                                     <label>Postcode / Zip <span class="required">*</span></label>
-                                                    <input type="text" placeholder="Postcode / Zip"  name="zip" value="{{ old('zip') }}" required>
+                                                    <input type="text" placeholder="Postcode / Zip"   value="{{ old('zip') }}" >
                                                 </div>
                                             </div>
                                 </div>
@@ -203,7 +203,7 @@ Begin Checkoutarea
                                           
                                             
                                     <div class="order-button-payment">
-                                        <button>Submit Payment</button>
+                                        <button id="complete-order" type="submit">Submit Payment</button>
                                     </div>
                                 </div>
                             </div>

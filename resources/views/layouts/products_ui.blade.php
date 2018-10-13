@@ -145,7 +145,7 @@ $(".video-thumbs").width($(".vidImage").length*imageWidth);
 <script>
         (function(){
    // Create a Stripe client.
-   var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+   var stripe = Stripe('pk_test_mMsfkIO9oSdbzRyWVLhgvslc');
    
    // Create an instance of Elements.
    var elements = stripe.elements();
@@ -194,7 +194,7 @@ $(".video-thumbs").width($(".vidImage").length*imageWidth);
      event.preventDefault();
 
      var options = {
-                name: document.getElementById('name_on_card').value,
+                name: document.getElementById('nameOnCard').value,
                 address_line1: document.getElementById('address').value,
                 address_city: document.getElementById('city').value,
                 address_state: document.getElementById('state').value,
