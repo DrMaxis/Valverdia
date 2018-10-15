@@ -22,6 +22,7 @@ Route::get('/products/{product}', 'ProductsPageController@show')->name('single-p
 Route::get('/cart', 'CartController@index')->name('cart');
 Route::post('/cart', 'CartController@store')->name('add-to-cart');
 Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
+Route::patch('/cart/{product}', 'CartController@update')->name('update-cart');
 Route::get('/checkout', 'CheckoutController@index')->name('checkout');
 Route::post('/checkout/send', 'CheckoutController@store')->name('checkout-send');
 Route::get('/thankyou', 'CheckoutController@confirm')->name('confirm-purchase');

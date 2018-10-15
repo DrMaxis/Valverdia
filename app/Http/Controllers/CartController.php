@@ -7,6 +7,7 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 
 use App\Product;
 use App\Color;
+use Illuminate\Support\Facades\Validator;
 
 
 class CartController extends Controller
@@ -66,5 +67,33 @@ class CartController extends Controller
 
         return back()->with('success_message', 'Item has been removed!');
     }
+
+
+     /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+
+     public function update(Request $request, $id) {
+
+        $validator = Validator::make($request->all(), [
+            'quantity' => 'required|numeric|between:1,5'
+
+        ]);
+
+        if($validator->fails()) {
+            session()->flash('errors', collect(['Quantity must be between 1 and 5.']));
+         return response()->json(['success' => false], 400);
+        }
+
+
+         Cart::update($id, $request->quantity);
+
+        session()->flash('success_message', 'Quantity updated!');
+         return response()->json(['success' => true]);
+     }
 
 }

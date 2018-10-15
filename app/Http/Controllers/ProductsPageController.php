@@ -5,16 +5,30 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Color;
-use App\Categories;
+use App\Category;
 
 class ProductsPageController extends Controller
 {
     public function index() {
-        $colors = Color::all();
+
+        if(request()->category) {
+            $products = Product::with('categories')->whereHas('categories', function ($query) {
+            $query->where('slug', request()->category);
+            })->get();
+            $categories = Category::all();
+            $colors = Color::all();
+            $categoryName = $categories->where('slug', request()->category)->first()->name;
+            $data = array('products' => $products, 'categories' => $categories, 'colors' => $colors, 'categoryName' => $categoryName);
+        } else {
         $products = Product::all();
-        $data = array('colors' => $colors, 'products' => $products);
-        return view('products')->with($data);
+        $categories = Category::all();
+        $colors = Color::all();
+        $categoryName = 'Featured';
+        $data = array('products' => $products, 'categories' => $categories, 'colors' => $colors, 'categoryName' => $categoryName );
+        }
+
         
+        return view('products')->with($data);
     }
 
 

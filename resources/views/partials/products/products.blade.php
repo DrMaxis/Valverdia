@@ -5,7 +5,7 @@
 <div class="col-md-9 col-md-push-3">
         <!-- Sidebar Right Top Content Start -->
         <div class="sidebar-desc-content">
-            <p>Example of category description text</p><hr>
+            <p>{{$categoryName}}</p><hr>
         </div>
         <!-- Sidebar Right Top Content Start -->
         <!-- Best Seller Product Start -->
@@ -81,24 +81,6 @@
                                 </div>
                                 @endforeach
                                 @endif
-                            </div>
-                            <!-- Row End -->
-                            <div class="row mt-40 mb-70">
-                                <div class="col-sm-6">
-                                    <ul class="blog-pagination">
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                    <!-- End of .blog-pagination -->
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="pro-list-details text-right">
-                                        <p class="mr-15 mt-10">Showing 1 to 8 of 8 (1 Pages)</p>
-                                    </div>
-                                    <!-- Pro List Details End -->
-                                </div>
                             </div>
                             <!-- Row End -->
                         </div>

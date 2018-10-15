@@ -18,21 +18,21 @@ class ProductsTableSeeder extends Seeder
             'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 150000 ,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-        ]);
+        ])->categories()->attach(1);
          Product::create([
             'name' => 'Blue Colored LED Tube ',
             'slug' => 'blue-colored-led-tube',
             'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-        ]);
+        ])->categories()->attach(1);
          Product::create([
             'name' => 'Green Colored LED Tube ',
             'slug' => 'green-colored-led-tube',
             'details' => 'High Quality and Efficient Colored LED Tube',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-        ]);
+        ])->categories()->attach(1);
        
         Product::create([
             'name' => 'RGB Color Changing FLEX LED',
@@ -40,7 +40,7 @@ class ProductsTableSeeder extends Seeder
             'details' => 'High Quality and Efficient Color Changing FLEX LED with Adhesive',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-        ]);
+        ])->categories()->attach(2);
 
         Product::create([
             'name' => 'Colored LED Tube bundle (2x)',
@@ -48,14 +48,14 @@ class ProductsTableSeeder extends Seeder
             'details' => 'A set of two Customizeable Colored LED Tubes',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-        ]);
+        ])->categories()->attach(1);
         Product::create([
             'name' => 'Colored LED Tube bundle (3x)',
             'slug' => 'three-colored-led-tubes',
             'details' => 'A set of three Customizeable Colored LED Tubes',
             'price' => 149999,
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-        ]);
+        ])->categories()->attach(1);
 
         /**
          *  Future Products

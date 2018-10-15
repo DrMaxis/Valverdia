@@ -1,4 +1,6 @@
 {
+    "/js/events.js": "/js/events.js",
+    "/js/bootstrap.js": "/js/bootstrap.js",
     "/js/vendor/jquery.js": "/js/vendor/jquery.js",
     "/css/animate.css": "/css/animate.css",
     "/css/base.css": "/css/base.css",
@@ -15,7 +17,6 @@
     "/js/vendor/jquery-1.12.4.min.js": "/js/vendor/jquery-1.12.4.min.js",
     "/js/vendor/modernizr-custom.js": "/js/vendor/modernizr-custom.js",
     "/js/jquery-ui.js": "/js/jquery-ui.js",
-    "/js/wow.min.js": "/js/wow.min.js",
     "/js/wave.js": "/js/wave.js",
     "/js/plugins.js": "/js/plugins.js",
     "/js/owl.carousel.min.js": "/js/owl.carousel.min.js",

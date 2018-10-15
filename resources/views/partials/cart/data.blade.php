@@ -45,8 +45,14 @@
                                         </td>
                                         <td class="product-name"><a href="{{ route('single-product', $item->model->slug) }}">{{$item->model->name}}</a></td>
                                         <td class="product-price"><span class="amount">{{$item->model->price}}</span></td>
-                                        <td class="product-quantity"><input type="number" value="1" /></td>
-                                        <td class="product-subtotal">{{$item->model->price}}</td>
+                                        <td>
+                                            <select class="product-quantity"   data-id="{{$item->rowId}}">
+                                                @for ($i = 1; $i < 5 + 1; $i++)
+                                                <option {{ $item->qty == $i ? 'selected' : ''}}>{{$i}}</option>
+                                                @endfor
+                                            </select>
+                                        </td>
+                                        <td class="product-subtotal">{{$item->subtotal}}</td>
                                         <td>
                                             <form class="product-remove" action="{{ route('cart.destroy', $item->rowId) }}" method="POST">
                                                     @csrf
