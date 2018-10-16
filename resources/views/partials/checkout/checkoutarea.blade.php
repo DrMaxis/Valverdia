@@ -176,7 +176,7 @@ Begin Checkoutarea
                                     </tbody>
                                     <tfoot>
                                         <tr class="cart-subtotal">
-                                            <th>Tax</th>
+                                            <th>Tax(7%)</th>
                                             <td><span class="amount">{{Cart::tax()}}</span></td>
                                         </tr>
                                         <tr class="order-total">
