@@ -68,7 +68,7 @@
                                     <!-- Thumbnail Description Start -->
                                     <div class="col-md-7 col-sm-6">
                                         <div class="thubnail-desc fix">
-                                            <h2 class="product-header">Sheepskin Pillow2</h2>
+                                            <h2 class="product-header">{{$product->name}}</h2>
                                             <!-- Product Rating Start -->
                                             <div class="rating-summary fix mtb-25">
                                                 <div class="rating f-left mr-10">
@@ -86,8 +86,8 @@
                                             <!-- Product Price Start -->
                                             <div class="pro-price mb-15">
                                                 <ul class="pro-price-list">
-                                                    <li class="price">$241.99</li>
-                                                    <li class="tax">Ex Tax: $199.99</li>
+                                                    <li class="price">{{$product->convertToUSD()}}</li>
+                                                    
                                                 </ul>
                                             </div>
                                             <!-- Product Price End -->
@@ -100,16 +100,7 @@
                                                 </ul>
                                             </div>
                                             <!-- Product Price Description End -->
-                                            <!-- Product Box Quantity Start -->
-                                            <div class="box-quantity mb-30">
-                                                <div class="quantity-item">
-                                                    <label>Qty: </label>
-                                                    <div class="cart-plus-minus">
-                                                        <input class="cart-plus-minus-box" type="text" name="qtybutton" value="0">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- Product Box Quantity End -->
+                                          
                                             <!-- Product Button Actions Start -->
                                             <div class="product-button-actions">
                                                 <button class="add-to-cart">add to cart</button>

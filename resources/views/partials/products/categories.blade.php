@@ -9,7 +9,7 @@
                 <h3>Types of Lights</h3>
                 <ul class="categorie-list">
                     @foreach($categories as $category)
-                    <li><a href="{{ route('products', ['category' => $category->slug])}}">{{$category->name}}</a></li>
+                    <li class="{{ setActiveCategory($category->slug)}}"><a href="{{ route('products', ['category' => $category->slug])}}">{{$category->name}}</a></li>
                     @endforeach
                 </ul>
             </div>

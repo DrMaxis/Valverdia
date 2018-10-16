@@ -31,7 +31,7 @@
 
 	
 @include('inc.footer')
-@include('inc.led_quickview')
+
 </div>
 <!--/-/-/-/-/-/-/-/-/
     End UI-Container  

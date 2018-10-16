@@ -4240,3 +4240,7 @@ canvas {
   color: #fa755a;
 }
 
+.categorie-list li.active {
+  font-weight: 500;
+}
+

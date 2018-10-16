@@ -19,16 +19,22 @@
                         </ul>
                     </div>
                 </div>
+                
+                <div class="col-md-4 col-sm-5 pull-right">
+                        <strong>Sort Price By: </strong>
+                    <a href="{{ route('products', ['category'=> request()->category, 'sort' => 'low_high']) }}">Low to High</a> |
+                    <a href="{{ route('products', ['category'=> request()->category, 'sort' => 'high_low']) }}">High to Low</a>
+                </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
                     <div class="tab-content categorie-list ">
                         <div id="list-view" class="tab-pane fade">
                             <div class="row">
-                                    @if(count($products) > 0)
+                                    
     
     
-                                    @foreach($products as $product)
+                                    @forelse($products as $product)
                                 <!-- Main Single Product Start -->
                                 <div class="main-single-product fix">
                                     <div class="col-sm-4">
@@ -79,8 +85,11 @@
                                         <!-- Product Content End -->
                                     </div>
                                 </div>
-                                @endforeach
-                                @endif
+                                @empty
+                                <div>Coming Soon!</div>
+                                
+                                @endforelse
+                                
                             </div>
                             <!-- Row End -->
                         </div>
@@ -88,9 +97,9 @@
                         <div id="grid-view" class="tab-pane fade mt-40 active in">
                             <div class="row">
 
-                                @if(count($products) > 0)
-                                @foreach($products as $product)
-
+                                
+                                @forelse ($products as $product)
+                                
                                 <div class="col-md-4 col-sm-6">
                                     <!-- Single Product Start -->
                                     <div class="single-product">
@@ -100,9 +109,7 @@
                                                 <img class="primary-img" src="img/new-products/1_1.jpg" alt="single-product">
                                                 <img class="secondary-img" src="img/new-products/1_2.jpg" alt="single-product">
                                             </a>
-                                            <div class="quick-view">
-                                                <a href="#" data-toggle="modal" data-target="#myModal"><i class="pe-7s-look"></i>quick view</a>
-                                            </div>
+                                           
                                             
                                         </div>
                                         <!-- Product Image End -->
@@ -122,8 +129,13 @@
                                     </div>
                                     <!-- Single Product End -->
                                 </div>
-                                @endforeach
-                                @endif
+                                @empty
+                                   <p>Coming Soon!</p>
+                                
+                                    
+                                @endforelse
+                                
+                                
                                 
 
                               
