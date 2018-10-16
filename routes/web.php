@@ -27,6 +27,8 @@ Route::get('/checkout', 'CheckoutController@index')->name('checkout');
 Route::post('/checkout/send', 'CheckoutController@store')->name('checkout-send');
 Route::get('/thankyou', 'CheckoutController@confirm')->name('confirm-purchase');
 
+Route::post('/coupon', 'CouponsController@store')->name('add-coupon');
+Route::delete('/coupon', 'CouponsController@destroy')->name('remove-coupon');
 
 
 
