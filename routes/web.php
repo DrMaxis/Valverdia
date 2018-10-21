@@ -33,7 +33,7 @@ Route::delete('/coupon', 'CouponsController@destroy')->name('remove-coupon');
 
 
 
-
+Route::get('test', 'TestPAgeController@index');
 Route::get('empty', function() {
     Cart::destroy();
 });

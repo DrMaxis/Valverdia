@@ -9,7 +9,7 @@
 
 
 @include('inc.head')
-
+@yield('xcss')
 
     <body>
 <!--/-/-/-/-/-/-/-/-/
@@ -104,9 +104,9 @@
 <script type="text/javascript" src="{{asset('js/main.js')}}"></script>
 <!--/-/-/-/-/-/-/-/-/ 
     Wave
-
-<script type="text/javascript" src="{{asset('js/wave.js')}}"></script>
 -/-/-/-/-/-/-/-/-/-->
+<script type="text/javascript" src="{{asset('js/wave.js')}}"></script>
+
 
 
 

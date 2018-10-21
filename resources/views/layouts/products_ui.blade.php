@@ -9,7 +9,7 @@
 
 
 @include('inc.head')
-
+@yield('xcss')
 
     <body>
 <!--/-/-/-/-/-/-/-/-/
