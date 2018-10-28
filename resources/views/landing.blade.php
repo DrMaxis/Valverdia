@@ -3,6 +3,7 @@
 
 
 
+            
 @section('content')
 {{-- Hero Slider --}}
 @include('partials.landing.heroslider')
@@ -47,14 +48,15 @@ changeColor(".rgb", ["green", "yellow", "blue", "red", "purple", "cyan", "violet
 });
 
 
+    var imageWidth = 50;
+                
+                $(".video-thumbs").width($(".vidImage").length*imageWidth);
+                  
+                });
 
-var imageWidth = 100;
-
-$(".video-thumbs").width($(".vidImage").length*imageWidth);
-  
-});
         </script>
 
 
+                
 
 @endsection

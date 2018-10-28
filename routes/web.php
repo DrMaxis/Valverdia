@@ -43,3 +43,8 @@ Route::view('cart', 'cart');
 Route::view('/checkout', 'checkout');
 Route::view('/thankyou', 'thankyou');
 Route::view('/', 'main'); */
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

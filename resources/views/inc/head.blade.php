@@ -108,39 +108,6 @@
     </filter>
   </svg>
 
-  <style>
-      @-webkit-keyframes fade {
-  0% {
-    opacity: 1;
-  }
-
-  94% {
-    opacity: 1;
-  }
-
-  95% {
-    opacity: 0;
-  }
-
-  96% {
-    opacity: 1;
-  }
-
-  97% {
-    opacity: 0;
-  }
-
-  99% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-
-      </style>
 
 
 

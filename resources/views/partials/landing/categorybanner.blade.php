@@ -1,51 +1,60 @@
 <!--/-/-/-/-/-/-/-/-/
     Begin Category Banner
 -/-/-/-/-/-/-/-/-/-/-/-->
-<div class="home-home-2-banner pb-100">
-        <div class="container-fluid plr-0">
+<!-- New Products Banner Start -->
+<div class="new-products-banner pb-100">
+        <div class="container">
             <div class="row">
-                <!--/-/-/-/-/-/-/-/-/
-                     Begin Single Banner 
-                    -/-/-/-/-/-/-/-/-/-/-->
-                <div class="col-sm-6" style="display: table-cell;">
-                    <div class="single-banner zoom">
-                        <img src="img/products-banner/6.jpg" alt="single-banner">
-                        <div class="banner-content">
-                            <h5>LED Tubes</h5>
-                            <h3>Flash Sale</h3>
-                            <a href="categorie-page.html">shop now</a>
+                <!-- Single Banner Start -->
+                <div class="col-sm-4 unired">
+                    <div class="single-banner zoom mb-30" style="background:red; width:370px; height:400px" >
+                        <img src="#"  alt="product-banner">
+                        <div class="banner-desc">
+                            <a href="categorie-page.html">Decorative Accessories</a>
+                            <p>25 products</p>
                         </div>
                     </div>
                 </div>
-                <!--/-/-/-/-/-/-/-/-/
-                     End Single Banner 
-                    -/-/-/-/-/-/-/-/-/-/-->
-                    
-                <!--/-/-/-/-/-/-/-/-/
-                     Begin Single Banner 
-                    -/-/-/-/-/-/-/-/-/-/-->
-                <div class="col-sm-6" style="display: table-cell;">
-                    <div class="single-banner zoom">
-                        <img src="img/products-banner/7.jpg" alt="single-banner">
-                        <div class="banner-content">
-                            <h5>Flex LED</h5>
-                            <h3>Sale 30% Off</h3>
-                            <a href="categorie-page.html">shop now</a>
+                <!-- Single Banner End -->
+                <!-- Single Banner Start -->
+                <div class="col-sm-8 uniblue">
+                    <div class="single-banner zoom mb-30" style="background:blue; width:770px; height:400px">
+                        <img src="#" alt="product-banner">
+                        <div class="banner-desc">
+                            <a href="categorie-page.html">Chairs & Recliners</a>
+                            <p>25 products</p>
                         </div>
                     </div>
                 </div>
-                <!--/-/-/-/-/-/-/-/-/ 
-                    End Single Banner 
-                    -/-/-/-/-/-/-/-/-/-/-->
+                <!-- Single Banner End -->
+                <!-- Single Banner Start -->
+                <div class="col-sm-8 unigreen">
+                    <div class="single-banner zoom" style="background:green; width:770px; height:400px">
+                        <img src="#" alt="product-banner">
+                        <div class="banner-desc">
+                            <a href="categorie-page.html">Sofas & Loveseats</a>
+                            <p>25 products</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Banner End -->
+                <!-- Single Banner Start -->
+                <div class="col-sm-4 unigold">
+                    <div class="single-banner zoom"style="background:gold; width:370px; height:400px">
+                        <img src="#"  alt="product-banner">
+                        <div class="banner-desc">
+                            <a href="categorie-page.html">Window Treatments</a>
+                            <p>25 products</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Banner End -->
             </div>
-            <!--/-/-/-/-/-/-/-/-/
-                    End Row 
-                -/-/-/-/-/-/-/-/-/-/-->
+            <!-- Row End -->
         </div>
-        <!--/-/-/-/-/-/-/-/-/
-             End Container 
-            -/-/-/-/-/-/-/-/-/-/-->
+        <!-- Container End -->
     </div>
+    <!-- New Products Banner End -->
     <!--/-/-/-/-/-/-/-/-/
     End Category Banner
 -/-/-/-/-/-/-/-/-/-/-/--->

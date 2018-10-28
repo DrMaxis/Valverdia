@@ -8,7 +8,7 @@
                     Begin Single Banner  
                 -/-/-/-/-/-/-/-/-/-->
                 <div class="col-sm-6">
-                    <div class="single-banner">
+                    <div class="single-banner" style="background:gold; width:570px; height:611px">
                         <a href="#"><img src="img/products-banner/10.jpg" alt="product-banner"></a>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                     Begin Single Banner 
                 -/-/-/-/-/-/-/-/-/-->
                 <div class="col-sm-6">
-                    <div class="single-banner">
+                    <div class="single-banner" style="background:gold; width:570px; height:611px">
                         <a href="#"><img src="img/products-banner/11.jpg" alt="product-banner"></a>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                     Begin Single Banner  
                 -/-/-/-/-/-/-/-/-/-->
                 <div class="col-sm-6">
-                    <div class="single-banner">
+                    <div class="single-banner" style="background:gold; width:570px; height:611px">
                         <a href="#"><img src="img/products-banner/10.jpg" alt="product-banner"></a>
                     </div>
                 </div>
