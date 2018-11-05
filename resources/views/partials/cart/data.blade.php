@@ -141,7 +141,7 @@
                                                 @endif
 
                                     <tr class="cart-subtotal">
-                                        <th>Tax</th>
+                                        <th>Tax(6.9%)</th>
                                         <td><span class="amount">{{convertToUSD($newTax)}}</span></td>
                                     </tr>
 

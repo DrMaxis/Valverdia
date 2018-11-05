@@ -22,18 +22,12 @@ class CartController extends Controller
 
 
     public function index() {
-        $subtotal = convertToUSD(Cart::subtotal());
-
-        $tax = config('cart.tax') / 100;
-        $discount = session()->get('coupon')['discount'] ?? 0;
-        $newSubtotal = ($subtotal - $discount);
-        $newTax = $newSubtotal * $tax;
-        $newTotal = $newSubtotal * (1 + $tax);
+        
        return view('cart')->with([
-           'discount' => $discount,
-           'newSubtotal' => $newSubtotal,
-           'newTax' => $newTax,
-           'newTotal' => $newTotal,
+        'discount' => $this->getData()->get('discount'),
+        'newSubtotal' => $this->getData()->get('newSubtotal'),
+        'newTax' => $this->getData()->get('newTax'),
+        'newTotal' => $this->getData()->get('newTotal'),
        ]);;
     }
 
@@ -106,5 +100,20 @@ class CartController extends Controller
         session()->flash('success_message', 'Quantity updated!');
          return response()->json(['success' => true]);
      }
+
+     private function getData() {
+        $subtotal = convertToUSD(Cart::subtotal());
+        $tax = config('cart.tax') / 100;
+        $discount = session()->get('coupon')['discount'] ?? 0;
+        $newSubtotal = ($subtotal - $discount);
+        $newTax = $newSubtotal * $tax;
+        $newTotal = $newSubtotal * (1 + $tax);
+       return collect([
+           'discount' => $discount,
+           'newSubtotal' => $newSubtotal,
+           'newTax' => $newTax,
+           'newTotal' => $newTotal,
+       ]);
+    }
 
 }

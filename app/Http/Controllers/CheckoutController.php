@@ -20,16 +20,12 @@ class CheckoutController extends Controller
     public function index()
     {
 
-        $tax = config('cart.tax') / 100;
-        $discount = session()->get('coupon')['discount'] ?? 0;
-        $newSubtotal = (Cart::subtotal() - $discount);
-        $newTax = $newSubtotal * $tax;
-        $newTotal = $newSubtotal * (1 + $tax);
+        
        return view('checkout')->with([
-           'discount' => $discount,
-           'newSubtotal' => $newSubtotal,
-           'newTax' => $newTax,
-           'newTotal' => $newTotal,
+           'discount' => $this->getData()->get('discount'),
+           'newSubtotal' => $this->getData()->get('newSubtotal'),
+           'newTax' => $this->getData()->get('newTax'),
+           'newTotal' => $this->getData()->get('newTotal'),
        ]);
     }
 
@@ -72,20 +68,22 @@ class CheckoutController extends Controller
         })->values()->toJson();
         try {
             $charge = Stripe::charges()->create([
-                'amount' => Cart::total(),
+                'amount' => $this->getData()->get('newTotal'),
                 'currency' => 'USD',
                 'source' => $request->stripeToken,
                 'description' => 'Order',
                 'receipt_email' => $request->email,
                 'metadata' => [
                     'contents' => $contents,
-                    'quantity' => Cart::instance('default')->count()
+                    'quantity' => Cart::instance('default')->count(),
+                    'discount' => collect(session()->get('coupon'))->toJson(),
                 ],
             ]);
 
             //Success
 
-            Cart:: instance('default')->destroy();
+            Cart::instance('default')->destroy();
+            session()->forget('coupon');
 
         return redirect()->route('confirm-purchase')->with('success_message', 'Thank You! Your Order Has Been Placed!');
     } catch (CardErrorException $e) {
@@ -136,5 +134,20 @@ class CheckoutController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    private function getData() {
+        $subtotal = convertToUSD(Cart::subtotal());
+        $tax = config('cart.tax') / 100;
+        $discount = session()->get('coupon')['discount'] ?? 0;
+        $newSubtotal = ($subtotal - $discount);
+        $newTax = $newSubtotal * $tax;
+        $newTotal = $newSubtotal * (1 + $tax);
+       return collect([
+           'discount' => $discount,
+           'newSubtotal' => $newSubtotal,
+           'newTax' => $newTax,
+           'newTotal' => $newTotal,
+       ]);
     }
 }

@@ -81,27 +81,47 @@ Begin Checkoutarea
                                         <th class="product-total">Total</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class="scrollable" >
                                     @foreach(Cart::content() as $item)
-                                    <tr class="cart_item">
+                                    <tr class="cart_item ">
                                         <td class="product-name">
                                             {{$item->name}} <strong class="product-quantity">{{$item->qty}}</strong>
                                         </td>
                                         <td class="product-total">
-                                            <span class="amount">{{convertToUSD($item->price)}}</span>
+                                            <span class="amount">{{convertToUSD($item->subtotal)}}</span>
                                         </td>
                                     </tr>
                                     @endforeach
 
                                 </tbody>
                                 <tfoot>
+                                        @if (session()->has('coupon'))
+                                        <tr class="cart-coupon">
+                                            <th>Coupon: {{session()->get('coupon')['name']}}</th>
+                                            <td><span class="amount">--({{convertToUSD(session()->get('coupon')['discount'] )}})</span>
+                                            </td>
+                                        </tr>
+                                        <br>
+                                        @endif
+
+                                        <tr class="cart-subtotal bb">
+                                                @if(session()->has('coupon'))
+                                                    <th>New Subtotal</th>
+                                                    <td><span class="amount">{{convertToUSD($newSubtotal)}}</span>
+                                                    </td>
+                                                    
+                                                    
+                                                </tr>
+                                                
+                                                        @endif
                                     <tr class="cart-subtotal">
-                                        <th>Tax(7%)</th>
-                                        <td><span class="amount">{{Cart::tax()}}</span></td>
+                                        <th>Tax(6.9%)</th>
+                                        <td><span class="amount">{{convertToUSD($newTax)}}</span></td>
                                     </tr>
+
                                     <tr class="order-total">
                                         <th>Order Total</th>
-                                        <td><strong><span class="amount">{{Cart::total()}}</span></strong>
+                                        <td><strong><span class="amount">{{convertToUSD($newTotal)}}</span></strong>
                                         </td>
                                     </tr>
                                 </tfoot>
