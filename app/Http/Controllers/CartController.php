@@ -22,8 +22,19 @@ class CartController extends Controller
 
 
     public function index() {
-        
-        return view('cart');
+        $subtotal = convertToUSD(Cart::subtotal());
+
+        $tax = config('cart.tax') / 100;
+        $discount = session()->get('coupon')['discount'] ?? 0;
+        $newSubtotal = ($subtotal - $discount);
+        $newTax = $newSubtotal * $tax;
+        $newTotal = $newSubtotal * (1 + $tax);
+       return view('cart')->with([
+           'discount' => $discount,
+           'newSubtotal' => $newSubtotal,
+           'newTax' => $newTax,
+           'newTotal' => $newTotal,
+       ]);;
     }
 
 

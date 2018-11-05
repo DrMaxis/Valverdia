@@ -13,14 +13,14 @@ class CouponTableSeeder extends Seeder
     public function run()
     {
        Coupon::create([
-           'coupon-code' => 'TEST123',
+           'coupon_code' => 'TEST123',
            'type' => 'fixed',
            'value' => 30,
 
        ]);
 
        Coupon::create([
-        'coupon-code' => 'TEST321',
+        'coupon_code' => 'TEST321',
         'type' => 'percent',
         'percent_off' => 50,
 

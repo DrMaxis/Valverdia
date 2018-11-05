@@ -60,7 +60,7 @@
                                             <!-- Product Price Start -->
                                             <div class="pro-price mb-15">
                                                 <ul class="pro-price-list">
-                                                    <li class="price">{{$product->convertToUSD()}}</li>
+                                                    <li class="price">{{convertToUSD($product->price)}}</li>
                                                     <li class="mtb-50">
                                                         <p>{{$product->description}}</p>
                                                     </li>
@@ -116,7 +116,7 @@
                                         <!-- Product Content Start -->
                                         <div class="pro-content text-center">
                                             <h4><a href="{{route('single-product', $product->slug)}}">{{$product->name}}</a></h4>
-                                            <p class="price"><span>{{$product->convertToUSD()}}</span></p>
+                                            <p class="price"><span>{{convertToUSD($product->price)}}</span></p>
                                             <form class="action-links2" action="{{route('add-to-cart')}}" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="id" value="{{$product->id}}">

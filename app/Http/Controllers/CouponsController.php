@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Coupon;
-
+use Gloudemans\Shoppingcart\Facades\Cart;
 class CouponsController extends Controller
 {
    
@@ -17,18 +17,31 @@ class CouponsController extends Controller
      */
     public function store(Request $request)
     {
-        return 'adding coupon';
+        $coupon = Coupon::where('coupon_code', $request->coupon_code)->first();
+        
+        if(!$coupon) {
+            return redirect()->route('cart')->withErrors('Wrong Coupon Code?');
+        }
+
+        session()->put('coupon', [
+            'name' => $coupon->coupon_code,
+            'discount' => $coupon->discount(Cart::subtotal()),
+        ]);
+
+        return redirect()->route('cart')->with('success_message', 'Coupon Applied!');
     }
 
     
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * 
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy()
     {
-        //
+        session()->forget('coupon');
+        return redirect()->route('cart')->with('success_message', 'Coupon Applied!');
+
     }
 }

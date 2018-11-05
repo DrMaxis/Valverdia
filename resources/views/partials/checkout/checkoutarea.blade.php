@@ -88,7 +88,7 @@ Begin Checkoutarea
                                             {{$item->name}} <strong class="product-quantity">{{$item->qty}}</strong>
                                         </td>
                                         <td class="product-total">
-                                            <span class="amount">{{$item->price}}</span>
+                                            <span class="amount">{{convertToUSD($item->price)}}</span>
                                         </td>
                                     </tr>
                                     @endforeach
