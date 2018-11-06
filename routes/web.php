@@ -30,7 +30,8 @@ Route::get('/thankyou', 'CheckoutController@confirm')->name('confirm-purchase');
 Route::post('/coupon', 'CouponsController@store')->name('add-coupon');
 Route::delete('/coupon', 'CouponsController@destroy')->name('remove-coupon');
 
-
+Route::get('/about', 'AboutUsController@index')->name('about');
+Route::get('/blog', 'BlogController@index')->name('blog');
 
 
 Route::get('test', 'TestPAgeController@index');

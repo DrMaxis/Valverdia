@@ -34,16 +34,9 @@
                             Start Single Footer 
                         -/-/-/-/-/-/-/-/-/-->
                          <div class="single-footer col-md-3 col-sm-6">
-                             <h4 class="footer-title">information</h4>
+                             <h4 class="footer-title">Info & Policy</h4>
                              <div class="footer-content">
-                                 <ul class="footer-list">
-                                     <li><a href="#">about us</a></li>
-                                     <li><a href="#">delivery information</a></li>
-                                     <li><a href="#">privacy policy</a></li>
-                                     <li><a href="#">terms & conditions</a></li>
-                                     <li><a href="#">warranty</a></li>
-                                     <li><a href="#">FAQ</a></li>
-                                 </ul>
+                                 {{menu('foot-infop', 'partials.menus.foot-infop')}}
                              </div>
                          </div>
                          <!--/-/-/-/-/-/-/-/-/ 
@@ -54,17 +47,9 @@
                             Start Single Footer 
                         -/-/-/-/-/-/-/-/-/-->
                          <div class="single-footer col-md-3 col-sm-6">
-                             <h4 class="footer-title">extras</h4>
+                             <h4 class="footer-title">Shipping and Returns</h4>
                              <div class="footer-content">
-                                 <ul class="footer-list">
-                                     <li><a href="#">brands</a></li>
-                                     <li><a href="#">gift certificates</a></li>
-                                     <li><a href="#">Affiliate</a></li>
-                                     <li><a href="#">Specials</a></li>
-                                     <li><a href="#">contact us</a></li>
-                                     <li><a href="#">returns</a></li>
-                                     <li><a href="#">Map</a></li>
-                                 </ul>
+                                 {{menu('foot-shipr', 'partials.menus.foot-shipr')}}
                              </div>
                          </div>
                          <!--/-/-/-/-/-/-/-/-/ 
@@ -122,13 +107,7 @@
                                 Start Footer Social List 
                             -/-/-/-/-/-/-/-/-/-->
                              <div class="socila-footer">
-                                 <ul class="social-footer-list list-inline text-right">
-                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                     <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                     <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                                     <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                     <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                 </ul>
+                                 {{menu('foot-social', 'partials.menus.foot-social')}}
                              </div>
                              <!--/-/-/-/-/-/-/-/-/ 
                                 End Footer Social List 

@@ -33,50 +33,8 @@
             <div class="col-lg-7 col-md-7 col-sm-12  hidden-sm hidden-xs">
                 <div class="primary-menu">
                     <nav>
-                        <ul class="primary-menu-list text-center">
-                            <li><a href="{{route('home')}}">Home</a>
-
-                            </li>
-                            <li><a href="#">LED Tubes<i class="pe-7s-angle-down"></i></a>
-                                <!--/-/-/-/-/-/-/-/-/ 
-                                        Begin Mega Menu 
-                                        -/-/-/-/-/-/-/-/-/-->
-                                <ul class="ht-dropdown mega-menu">
-                                    <!--/-/-/-/-/-/-/-/-/ 
-                                            Begin Sub Menu 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                    <li>
-                                        <h3>RGB Lights</h3>
-                                        <ul>
-                                            <li><a href="{{route('products')}}">Polyphasic Colored Tubes</a></li>
-
-                                        </ul>
-                                    </li>
-                                    <!--/-/-/-/-/-/-/-/-/ 
-                                            Begin Single Mega Sub Menu  
-                                            -/-/-/-/-/-/-/-/-/-->
-
-                                    <!--/-/-/-/-/-/-/-/-/ 
-                                           Begin Single Mega Sub Menu 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                    <li>
-                                        <h3>Smart Lights</h3>
-                                        <ul>
-                                            <li><a href="{{route('products')}}">Saber Light</a></li>
-                                            <li><a href="{{route('products')}}">FLEX LED</a></li>
-                                        </ul>
-                                    </li>
-                                    <!--/-/-/-/-/-/-/-/-/ 
-                                            Single Mega Sub Menu Begin 
-                                            -/-/-/-/-/-/-/-/-/-->
-                                </ul>
-                                <!--/-/-/-/-/-/-/-/-/ 
-                                        Mega Menu End 
-                                        -/-/-/-/-/-/-/-/-/-->
-                            </li>
-
-                            <li><a href="about-us.html">about us</a></li>
-                        </ul>
+                            {{menu('main', 'partials.menus.main')}}
+                        
                     </nav>
                 </div>
             </div>
