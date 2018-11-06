@@ -7,30 +7,22 @@ Begin Product ShowCase
         <div class="container">
             <div class="row">
                 <div class="col-sm-5">
-                    <img id="big-img" src="img/new-products/1_1.jpg" data-zoom-image="img/new-products/1_1.jpg" alt="product-image" />
+                    <img id="big-img" src="{{productImage($product->image)}}" data-zoom-image="{{asset('storage/'.$product->image)}}" alt="product-image" />
 
                     <div id="small-img" class="mt-20">
 
                         <div class="thumb-menu owl-carousel">
-                            <a href="#" data-image="img/new-products/1_2.jpg" data-zoom-image="img/new-products/1_2.jpg">
-                                <img src="img/new-products/1_2.jpg" alt="product-image" />
-                            </a>
 
-                            <a href="#" data-image="img/new-products/2_1.jpg" data-zoom-image="img/new-products/2_1.jpg">
-                                <img src="img/new-products/2_1.jpg" alt="product-image" />
-                            </a>
+                            @if($product->images)
 
-                            <a href="#" data-image="img/new-products/2_2.jpg" data-zoom-image="img/new-products/2_2.jpg">
-                                <img src="img/new-products/2_2.jpg" alt="product-image" />
-                            </a>
+                            @foreach(json_decode($product->images, true) as $image)
 
-                            <a href="#" data-image="img/new-products/3_1.jpg" data-zoom-image="img/new-products/3_1.jpg">
-                                <img src="img/new-products/3_1.jpg" alt="product-image" />
+                            <a id="product-thumb" data-image="{{productImage($product->image)}}" data-zoom-image="{{productImage($product->image)}}">
+                                <img src="{{productImage($image)}}" alt="product-image" />
                             </a>
-
-                            <a href="#" data-image="img/new-products/2_1.jpg" data-zoom-image="img/new-products/2_1.jpg">
-                                <img src="img/new-products/2_1.jpg" alt="product-image" />
-                            </a>
+                            @endforeach
+                            
+                            @endif
                         </div>
                     </div>
                 </div>

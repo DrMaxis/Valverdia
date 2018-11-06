@@ -36,7 +36,7 @@
                         -/-/-/-/-/-/-/-/-/-/-->
                         <div class="pro-img">
                             <a href="#">
-                                <img class="primary-img" src="img/new-products/1_2.jpg" alt="single-product">
+                                <img class="primary-img" src="{{productImage($product->image)}}" alt="single-product">
                                 <img class="secondary-img" src="img/new-products/5_1.jpg" alt="single-product">
                             </a>
                             <div class="quick-view">

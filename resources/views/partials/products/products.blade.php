@@ -43,7 +43,7 @@
                                             <!-- Product Image Start -->
                                             <div class="pro-img">
                                                 <a href="{{route('single-product', $product->slug)}}">
-                                                    <img class="primary-img" src="#" alt="single-product">
+                                                    <img class="primary-img" src="{{productImage($product->image)}}" alt="single-product">
                                                 </a>
                                                 <div class="quick-view">
                                                     <a href="#" data-toggle="modal" data-target="#myModal"><i class="pe-7s-look"></i>quick view</a>
@@ -106,7 +106,7 @@
                                         <!-- Product Image Start -->
                                         <div class="pro-img">
                                             <a href="{{route('single-product', $product->slug)}}">
-                                                <img class="primary-img" src="img/new-products/1_1.jpg" alt="single-product">
+                                                <img class="primary-img" src="{{productImage($product->image)}}" alt="single-product">
                                                 <img class="secondary-img" src="img/new-products/1_2.jpg" alt="single-product">
                                             </a>
                                            

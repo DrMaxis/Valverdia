@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Product;
 use App\Color;
 use App\Category;
@@ -36,6 +37,10 @@ class ProductsPageController extends Controller
             'products' => $products,
             'categories' => $categories,
             'categoryName' => $categoryName,
+            'discount' => $this->getData()->get('discount'),
+            'newSubtotal' => $this->getData()->get('newSubtotal'),
+            'newTax' => $this->getData()->get('newTax'),
+            'newTotal' => $this->getData()->get('newTotal'),
         ]);
     }
 
@@ -47,6 +52,25 @@ class ProductsPageController extends Controller
         return view('singleProduct')->with([
             'product' => $product,
             'popular' => $popular,
+            'discount' => $this->getData()->get('discount'),
+            'newSubtotal' => $this->getData()->get('newSubtotal'),
+            'newTax' => $this->getData()->get('newTax'),
+            'newTotal' => $this->getData()->get('newTotal'),
             ]);
+    }
+
+    private function getData() {
+        $subtotal = convertToUSD(Cart::subtotal());
+        $tax = config('cart.tax') / 100;
+        $discount = session()->get('coupon')['discount'] ?? 0;
+        $newSubtotal = ($subtotal - $discount);
+        $newTax = $newSubtotal * $tax;
+        $newTotal = $newSubtotal * (1 + $tax);
+       return collect([
+           'discount' => $discount,
+           'newSubtotal' => $newSubtotal,
+           'newTax' => $newTax,
+           'newTotal' => $newTotal,
+       ]);
     }
 }

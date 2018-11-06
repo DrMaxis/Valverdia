@@ -85,7 +85,7 @@
                                     @foreach (Cart::content() as $item)
                                     <div class="single-cart-box">
                                         <div class="cart-img">
-                                            <a href="{{ route('single-product', $item->model->slug) }}"><img src="img/menu/1.jpg" alt="cart-image"></a>
+                                            <a href="{{ route('single-product', $item->model->slug) }}"><img src="{{asset('storage/'.$item->model->image)}}" alt="cart-image"></a>
                                         </div>
                                         <div class="cart-content">
                                             <h6><a href="{{ route('single-product', $item->model->slug) }}">{{$item->model->name}}</a></h6>
@@ -98,9 +98,9 @@
                                             -/-/-/-/-/-/-/-/-/-->
                                     @endforeach
                                     <div class="cart-footer fix">
-                                        <h5>total :<span class="f-right">$698.00</span></h5>
+                                        <h5>total :<span class="f-right">{{convertToUSD($newTotal)}}</span></h5>
                                         <div class="cart-actions">
-                                            <a class="checkout" href="checkout.html">Checkout</a>
+                                            <a class="checkout" href="{{route('checkout')}}">Checkout</a>
                                         </div>
                                     </div>
                                     <!--/-/-/-/-/-/-/-/-/ 
