@@ -45,9 +45,7 @@
                                                 <a href="{{route('single-product', $product->slug)}}">
                                                     <img class="primary-img" src="{{productImage($product->image)}}" alt="single-product">
                                                 </a>
-                                                <div class="quick-view">
-                                                    <a href="#" data-toggle="modal" data-target="#myModal"><i class="pe-7s-look"></i>quick view</a>
-                                                </div>
+                                                
                                             </div>
                                             <!-- Product Image End -->
                                         </div>
@@ -62,7 +60,7 @@
                                                 <ul class="pro-price-list">
                                                     <li class="price">{{convertToUSD($product->price)}}</li>
                                                     <li class="mtb-50">
-                                                        <p>{{$product->description}}</p>
+                                                        <p>{!!$product->description!!}</p>
                                                     </li>
                                                 </ul>
                                             </div>

@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
-use App\User;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Foundation\Auth\RegistersUsers;
+use Gloudemans\Shoppingcart\Facades\Cart;
+use App\User;
 
 class RegisterController extends Controller
 {
@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -68,5 +68,39 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+
+    /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showRegistrationForm()
+    {
+        return view('auth.register')->with([
+            'discount' => $this->getData()->get('discount'),
+            'newSubtotal' => $this->getData()->get('newSubtotal'),
+            'newTax' => $this->getData()->get('newTax'),
+            'newTotal' => $this->getData()->get('newTotal'),
+        ]);
+    }
+
+    public function redirectTo() {
+        return str_replace(url('/'), '', session()->get('previousUrl','/'));
+    }
+
+    private function getData() {
+        $subtotal = convertToUSD(Cart::subtotal());
+        $tax = config('cart.tax') / 100;
+        $discount = session()->get('coupon')['discount'] ?? 0;
+        $newSubtotal = ($subtotal - $discount);
+        $newTax = $newSubtotal * $tax;
+        $newTotal = $newSubtotal * (1 + $tax);
+       return collect([
+           'discount' => $discount,
+           'newSubtotal' => $newSubtotal,
+           'newTax' => $newTax,
+           'newTotal' => $newTotal,
+       ]);
     }
 }

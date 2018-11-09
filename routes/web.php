@@ -16,15 +16,16 @@ Route::get('/', function () {
 });
 
 
-Route::get('/', 'LandingPageController@index')->name('home');
+Route::get('/', 'LandingPageController@index')->name('front-page');
 Route::get('/products', 'ProductsPageController@index')->name('products');
 Route::get('/products/{product}', 'ProductsPageController@show')->name('single-product');
 Route::get('/cart', 'CartController@index')->name('cart');
 Route::post('/cart', 'CartController@store')->name('add-to-cart');
 Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
 Route::patch('/cart/{product}', 'CartController@update')->name('update-cart');
-Route::get('/checkout', 'CheckoutController@index')->name('checkout');
+Route::get('/checkout', 'CheckoutController@index')->name('checkout')->middleware('auth');
 Route::post('/checkout/send', 'CheckoutController@store')->name('checkout-send');
+Route::get('/guestcheckout', 'CheckoutController@index')->name('guest-checkout');
 Route::get('/thankyou', 'CheckoutController@confirm')->name('confirm-purchase');
 
 Route::post('/coupon', 'CouponsController@store')->name('add-coupon');
@@ -49,3 +50,7 @@ Route::view('/', 'main'); */
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

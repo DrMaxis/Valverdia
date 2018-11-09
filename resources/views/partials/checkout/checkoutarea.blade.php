@@ -31,7 +31,12 @@ Begin Checkoutarea
                             <div class="col-md-6">
                                 <div class="checkout-form-list mb-30">
                                     <label>Email Address <span class="required">*</span></label>
-                                    <input type="email" placeholder="Email" id="email" name="email" value="{{ old('email') }}" required>
+                                    @if(auth()->user())
+
+                                    <input type="email" placeholder="Email" id="email" name="email" value="{{ auth()->user()->email }}" readonly>
+                                    @else
+                                    <input type="email" placeholder="Email" id="email" name="email" value="{{ old('email')}}" required>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-md-12">

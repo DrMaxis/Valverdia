@@ -14,7 +14,7 @@
                     -/-/-/-/-/-/-/-/-/-/-->
                     <div class="tab-content thumb-content">
                         <div id="detail" class="tab-pane fade in active pb-40">
-                            <p class="mb-10">{{$product->description}}</p>
+                            <p class="mb-10">{!!$product->description!!}</p>
                         </div>
                         <div id="review" class="tab-pane fade">
                             <!--/-/-/-/-/-/-/-/-/  

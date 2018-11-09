@@ -41,7 +41,7 @@
                                     
                                 @if (Cart::count() > 0) @foreach (Cart::content() as $item)
                                 <td class="product-thumbnail">
-                                    <a href="{{ route('single-product', $item->model->slug) }}"><img src="{{productImage($product->image)}}" alt="cart-image" /></a>
+                                    <a href="{{ route('single-product', $item->model->slug) }}"><img src="{{productImage($item->model->image)}}" alt="cart-image" /></a>
                                 </td>
                                 <td class="product-name"><a href="{{ route('single-product', $item->model->slug) }}">{{$item->model->name}}</a></td>
                                 <td class="product-price"><span class="amount">{{convertToUSD($item->model->price)}}</span></td>

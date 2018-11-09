@@ -92,9 +92,13 @@ Begin Product ShowCase
                             Begin Product Button Actions 
                         -/-/-/-/-/-/-/-/-/-/-->
                 <div class="product-button-actions">
-                    <button class="add-to-cart">add to cart</button>
-                    <a href="wish-list.html" data-toggle="tooltip" title="Add to Wishlist" class="same-btn mr-15"><i class="pe-7s-like"></i></a>
-                    <button data-toggle="tooltip" title="Compare this Product" class="same-btn"><i class="pe-7s-repeat"></i></button>
+                        <form action="{{ route('add-to-cart') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="id" value="{{$product->id}}">
+                                <input type="hidden" name="name" value="{{$product->name}}">
+                                <input type="hidden" name="price" value="{{$product->price}}">
+                                 <button type="submit" class="button button-plain">Add to Cart</button>
+                             </form>
                 </div>
                 <!--/-/-/-/-/-/-/-/-/ 
                             End Product Button Actions 

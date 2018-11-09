@@ -41,7 +41,7 @@ class CouponsController extends Controller
     public function destroy()
     {
         session()->forget('coupon');
-        return redirect()->route('cart')->with('success_message', 'Coupon Applied!');
+        return redirect()->route('cart')->with('success_message', 'Coupon Removed!');
 
     }
 }

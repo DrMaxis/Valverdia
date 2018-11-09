@@ -8,6 +8,7 @@ use Cartalyst\Stripe\Laravel\Facades\Stripe;
 use Cartalyst\Stripe\Exception\CardErrorException;
 use App\Product;
 use App\Color;
+use App\Http\Requests\CheckoutRequest;
 
 
 class CheckoutController extends Controller
@@ -21,6 +22,14 @@ class CheckoutController extends Controller
     {
 
         
+        if(Cart::instance('default')->count() ==0) {
+            return redirect()->route('shop');
+        }
+
+        if(auth()->user() && request()->is('guestcheckout')) {
+            return redirect()->route('checkout');
+        }
+
        return view('checkout')->with([
            'discount' => $this->getData()->get('discount'),
            'newSubtotal' => $this->getData()->get('newSubtotal'),
@@ -60,7 +69,7 @@ class CheckoutController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CheckoutRequest $request)
     {
 
         $contents = Cart::content()->map(function ($item) {
