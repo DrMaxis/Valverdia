@@ -1040,6 +1040,8 @@ ul.pull-left.home-4-search i {
     overflow: hidden;
 }
 
+
+
 .pro-img img {
     width: 100%;
     backface-visibility: hidden;
@@ -7770,6 +7772,40 @@ End HeroSlider
 .coupon-holder {
     margin:2rem 0;
     position: relative;
+}
+
+.product-imgs {
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap:20px;
+    margin-top:20px;
+
+    .chosen {
+        border: 1px solid red;
+    }
+}
+
+.main-img {
+
+    img {
+        opacity: 0;
+        transition: opacity .10s ease-in-out;
+    }
+    img.active {
+        opacity: 1;
+    }
+}
+
+.product-finger {
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    min-height:80px;
+    cursor: pointer;
+
+    &:hover {
+        border: 1px solid yellow;
+    }
 }
 
 /** EndTest Styles **/

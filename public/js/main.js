@@ -166,8 +166,21 @@ NOTE: main.js, All custom script and plugin activation script in this file.
         nav: false,
         dots: false,
         smartSpeed: 1000,
-        margin: 0
-
+        margin: 0,
+        responsive: {
+            0: {
+                items: 2
+            },
+            480: {
+                items: 3
+            },
+            768: {
+                items: 4
+            },
+            1000: {
+                items: 6
+            }
+        }
     });
 
     /*----------------------------
@@ -179,8 +192,21 @@ NOTE: main.js, All custom script and plugin activation script in this file.
         dots: false,
         margin: 30,
         navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        smartSpeed: 1000
-
+        smartSpeed: 1000,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            },
+            1170: {
+                items: 4
+            }
+        }
     });
 
     /*----------------------------
@@ -221,9 +247,20 @@ NOTE: main.js, All custom script and plugin activation script in this file.
         loop: false,
         navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
         margin: 15,
+        smartSpeed: 1000,
         nav: true,
-        dots: false
-
+        dots: false,
+        responsive: {
+            0: {
+                items: 4
+            },
+            600: {
+                items: 4
+            },
+            1000: {
+                items: 4
+            }
+        }
     });
 
     /*----------------------------
