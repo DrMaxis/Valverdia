@@ -18,3 +18,4 @@ Begin  Title
   <!--/-/-/-/-/-/-/-/-/
 End Title
 -/-/-/-/-/-/-/-/-/-->
+@include('inc.notifications')

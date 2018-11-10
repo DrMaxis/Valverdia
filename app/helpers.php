@@ -14,4 +14,24 @@ function productImage($path) {
 return  $path != null && file_exists('storage/'.$path) ? asset('storage/'.$path) :  asset('storage/assets/imgs/no-img.jpg');
 }
 
-
+function getNumbers() {
+    $subtotal = convertToUSD(Cart::subtotal());
+    $tax = config('cart.tax') / 100;
+    $discount = session()->get('coupon')['discount'] ?? 0;
+    $code = session()->get('coupon')['name'] ?? null;
+    $newSubtotal = ($subtotal - $discount);
+    
+    if ($newSubtotal < 0) {
+        $newSubtotal = 0;
+    }
+    $newTax = $newSubtotal * $tax;
+    $newTotal = $newSubtotal * (1 + $tax);
+   return collect([
+       'discount' => $discount,
+       'code' => $code,
+       'newSubtotal' => $newSubtotal,
+       'newTax' => $newTax,
+       'newTotal' => $newTotal,
+       'tax' => $tax,
+   ]);
+}

@@ -75,7 +75,7 @@ document.getElementById('complete-order').disabled = true;
 
 
      var options = {
-                name: document.getElementById('nameOnCard').value,
+                name: document.getElementById('name_on_card').value,
                 address_line1: document.getElementById('address').value,
                 address_city: document.getElementById('city').value,
                 address_state: document.getElementById('state').value,

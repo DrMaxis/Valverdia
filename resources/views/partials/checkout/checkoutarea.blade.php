@@ -12,31 +12,28 @@ Begin Checkoutarea
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="checkout-form-list mb-30">
-                                    <label>First Name <span class="required">*</span></label>
-                                    <input type="text" placeholder="First Name" id="name" name="name" value="{{ old('name') }}" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="checkout-form-list mb-30">
-                                    <label>Last Name <span class="required">*</span></label>
-                                    <input type="text" placeholder="Last Name" id="lastname" name="lastname" value="{{ old('lastname') }}" required>
+                                    <label>Name <span class="required">*</span></label>
+                                    <input type="text" placeholder="Name" id="name" name="name" value="{{ old('name') }}" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="checkout-form-list mb-30">
                                     <label>Name On Card <span class="required">*</span></label>
-                                    <input type="text" placeholder="Name on Card" id="nameOnCard" name="nameOnCard" value="{{old('nameOnCard')}}" required>
+                                    <input type="text" placeholder="Name on Card" id="name_on_card" name="name_on_card" value="{{old('name_on_card')}}" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="checkout-form-list mb-30">
-                                    <label>Email Address <span class="required">*</span></label>
-                                    @if(auth()->user())
+                                    <label>Email Address <span class="required">*</span></label> @if(auth()->user())
 
-                                    <input type="email" placeholder="Email" id="email" name="email" value="{{ auth()->user()->email }}" readonly>
-                                    @else
-                                    <input type="email" placeholder="Email" id="email" name="email" value="{{ old('email')}}" required>
-                                    @endif
+                                    <input type="email" placeholder="Email" id="email" name="email" value="{{ auth()->user()->email }}" readonly>                                    @else
+                                    <input type="email" placeholder="Email" id="email" name="email" value="{{ old('email')}}" required>                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="checkout-form-list mb-30">
+                                    <label>Phone<span class="required">*</span></label>
+                                    <input type="text" placeholder="Phone" id="phone" name="phone" value="{{ old('phone') }}" required>
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -69,6 +66,7 @@ Begin Checkoutarea
                                 </div>
                             </div>
 
+
                         </div>
 
                     </div>
@@ -86,7 +84,7 @@ Begin Checkoutarea
                                         <th class="product-total">Total</th>
                                     </tr>
                                 </thead>
-                                <tbody class="scrollable" >
+                                <tbody class="scrollable">
                                     @foreach(Cart::content() as $item)
                                     <tr class="cart_item ">
                                         <td class="product-name">
@@ -100,25 +98,24 @@ Begin Checkoutarea
 
                                 </tbody>
                                 <tfoot>
-                                        @if (session()->has('coupon'))
-                                        <tr class="cart-coupon">
-                                            <th>Coupon: {{session()->get('coupon')['name']}}</th>
-                                            <td><span class="amount">--({{convertToUSD(session()->get('coupon')['discount'] )}})</span>
-                                            </td>
-                                        </tr>
-                                        <br>
-                                        @endif
+                                    @if (session()->has('coupon'))
+                                    <tr class="cart-coupon">
+                                        <th>Coupon: {{session()->get('coupon')['name']}}</th>
+                                        <td><span class="amount">--({{convertToUSD(session()->get('coupon')['discount'] )}})</span>
+                                        </td>
+                                    </tr>
+                                    <br> @endif
 
-                                        <tr class="cart-subtotal bb">
-                                                @if(session()->has('coupon'))
-                                                    <th>New Subtotal</th>
-                                                    <td><span class="amount">{{convertToUSD($newSubtotal)}}</span>
-                                                    </td>
-                                                    
-                                                    
-                                                </tr>
-                                                
-                                                        @endif
+                                    <tr class="cart-subtotal bb">
+                                        @if(session()->has('coupon'))
+                                        <th>New Subtotal</th>
+                                        <td><span class="amount">{{convertToUSD($newSubtotal)}}</span>
+                                        </td>
+
+
+                                    </tr>
+
+                                    @endif
                                     <tr class="cart-subtotal">
                                         <th>Tax(6.9%)</th>
                                         <td><span class="amount">{{convertToUSD($newTax)}}</span></td>

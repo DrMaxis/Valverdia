@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     //protected $table = 'products';
-
+    protected $fillable = ['quantity'];
+    public $timestamps = false;
     public function categories() {
         return $this->belongsToMany('App\Category');
     }

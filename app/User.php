@@ -18,7 +18,7 @@ class User extends \TCG\Voyager\Models\User
     protected $fillable = [
         'name', 'email', 'password',
     ];
-
+    public $timestamps = false;
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -27,4 +27,8 @@ class User extends \TCG\Voyager\Models\User
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function orders() {
+        return $this->hasMany('App\Order');
+    }
 }

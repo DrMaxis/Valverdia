@@ -8,6 +8,8 @@ use Cartalyst\Stripe\Laravel\Facades\Stripe;
 use Cartalyst\Stripe\Exception\CardErrorException;
 use App\Product;
 use App\Color;
+use App\Order;
+use App\OrderProduct;
 use App\Http\Requests\CheckoutRequest;
 
 
@@ -22,19 +24,17 @@ class CheckoutController extends Controller
     {
 
         
-        if(Cart::instance('default')->count() ==0) {
-            return redirect()->route('shop');
-        }
+      
 
         if(auth()->user() && request()->is('guestcheckout')) {
             return redirect()->route('checkout');
         }
 
        return view('checkout')->with([
-           'discount' => $this->getData()->get('discount'),
-           'newSubtotal' => $this->getData()->get('newSubtotal'),
-           'newTax' => $this->getData()->get('newTax'),
-           'newTotal' => $this->getData()->get('newTotal'),
+           'discount' => $this->getNumbers()->get('discount'),
+           'newSubtotal' => $this->getNumbers()->get('newSubtotal'),
+           'newTax' => $this->getNumbers()->get('newTax'),
+           'newTotal' => $this->getNumbers()->get('newTotal'),
        ]);
     }
 
@@ -77,7 +77,7 @@ class CheckoutController extends Controller
         })->values()->toJson();
         try {
             $charge = Stripe::charges()->create([
-                'amount' => $this->getData()->get('newTotal'),
+                'amount' => $this->getNumbers()->get('newTotal'),
                 'currency' => 'USD',
                 'source' => $request->stripeToken,
                 'description' => 'Order',
@@ -91,11 +91,15 @@ class CheckoutController extends Controller
 
             //Success
 
+          
+            $order = $this->addToOrdersTables($request, null);
             Cart::instance('default')->destroy();
             session()->forget('coupon');
 
         return redirect()->route('confirm-purchase')->with('success_message', 'Thank You! Your Order Has Been Placed!');
+
     } catch (CardErrorException $e) {
+        $this->addToOrdersTables($request, $e->getMessage());
         return back()->withErrores('Error '. $e->getMessage());
     }
 }
@@ -145,18 +149,66 @@ class CheckoutController extends Controller
         //
     }
 
-    private function getData() {
+
+
+    protected function addToOrdersTables($request, $error) {
+
+          // insert into order table 
+$order = new Order;
+          $order = Order::create([
+            'user_id' => auth()->user() ? auth()->user()->id : null,
+        'billing_email' => $request->email,
+        'billing_name' => $request->name,
+        'billing_address' => $request->address,
+        'billing_city' => $request->city,
+        'billing_state' => $request->state,
+        'billing_zip' => $request->zip,
+        'billing_phone' => $request->phone,
+        'billing_name_on_card' => $request->name_on_card,
+        'billing_discount' => getNumbers()->get('discount'),
+        'billing_discount_code' => getNumbers()->get('code'),
+        'billing_subtotal' => getNumbers()->get('newSubtotal'),
+        'billing_tax' => getNumbers()->get('newTax'),
+        'billing_total' => getNumbers()->get('newTotal'),
+        'error' => null,
+        ]);
+
+//then order_product table
+
+            foreach(Cart::content() as $item) {
+                OrderProduct::create([
+                    'order_id' => $order->id,
+                    'product_id' => $item->model->id,
+                    'quantity' => $item->qty,
+                ]);
+            }
+            return $order;
+    }    
+    
+
+
+
+    private function getNumbers() {
         $subtotal = convertToUSD(Cart::subtotal());
         $tax = config('cart.tax') / 100;
         $discount = session()->get('coupon')['discount'] ?? 0;
+        $code = session()->get('coupon')['name'] ?? null;
         $newSubtotal = ($subtotal - $discount);
+        
+        if ($newSubtotal < 0) {
+            $newSubtotal = 0;
+        }
         $newTax = $newSubtotal * $tax;
         $newTotal = $newSubtotal * (1 + $tax);
        return collect([
            'discount' => $discount,
+           'code' => $code,
            'newSubtotal' => $newSubtotal,
            'newTax' => $newTax,
            'newTotal' => $newTotal,
+           'tax' => $tax,
        ]);
     }
+    
+   
 }
