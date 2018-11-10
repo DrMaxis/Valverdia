@@ -41,3 +41,14 @@ function presentDate($date)
 {
     return Carbon::parse($date)->format('M d, Y');
 }
+
+function getStockLevel($quantity) {
+    if($quantity > setting('site.stock_threshold')) {
+        $stockLevel = 'In Stock';  
+      } elseif($quantity <= setting('site.stock_threshold') && $quantity > 0) {
+          $stockLevel = 'Low Stock! Get It Soon!'; 
+      } else {
+          $stockLevel = 'SOLD OUT!!'; 
+      }
+      return $stockLevel;
+}

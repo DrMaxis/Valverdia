@@ -74,6 +74,14 @@ class CheckoutController extends Controller
     public function store(CheckoutRequest $request)
     {
 
+        //Last item runner up decider
+
+        if($this->productsAreNoLongerAvailable()) {
+            return back()->withErrores('Sorry! One or more of your Items in your cart has been sold out! ');
+        }
+
+
+
         $contents = Cart::content()->map(function ($item) {
             return $item->model->slug.','.$item->qty;
         })->values()->toJson();
@@ -96,6 +104,16 @@ class CheckoutController extends Controller
           
             $order = $this->addToOrdersTables($request, null);
             Mail::send(new OrderPlaced($order));
+
+                // Inventory check
+                $this->decreaseQuantities();
+
+
+
+
+
+
+
             Cart::instance('default')->destroy();
             session()->forget('coupon');
 
@@ -213,5 +231,24 @@ $order = new Order;
        ]);
     }
     
+
+
+    protected function decreaseQuantities() {
+        foreach(Cart::content() as $item) {
+            $product = Product::find($item->model->id);
+            $product->update(['quantity' => $product->quantity - $item->qty]);
+        }
+    }
+
+    protected function productsAreNoLongerAvailable() {
+        foreach(Cart::content() as $item) {
+            $product = Product::find($item->model->id);
+            if($product->quantity < $item->qty) {
+                return true;
+            }
+        }
+
+        return false;
+    }
    
 }

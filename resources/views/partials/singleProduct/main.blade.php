@@ -66,32 +66,18 @@ Begin Product ShowCase
                         -/-/-/-/-/-/-/-/-/-/-->
                 <div class="product-price-desc">
                     <ul class="pro-desc-list">
-                        <li>Product Code: <span>SAMI</span></li>
-                        <li>Reward Points: <span>1000</span></li>
-                        <li>Availability: <span>in Stock</span></li>
+                        <li>Availability: <span>{{$stockLevel}}</span></li>
                     </ul>
                 </div>
                 <!--/-/-/-/-/-/-/-/-/ 
                             End Product Price Description 
                         -/-/-/-/-/-/-/-/-/-/-->
-                <!--/-/-/-/-/-/-/-/-/ 
-                            Begin Product Box Quantity 
-                        -/-/-/-/-/-/-/-/-/-/-->
-                <div class="box-quantity mtb-20">
-                    <div class="quantity-item">
-                        <label>Qty: </label>
-                        <div class="cart-plus-minus">
-                            <input class="cart-plus-minus-box" type="text" name="qtybutton" value="0">
-                        </div>
-                    </div>
-                </div>
-                <!--/-/-/-/-/-/-/-/-/ 
-                            End Product Box Quantity 
-                        -/-/-/-/-/-/-/-/-/-/-->
+                
                 <!--/-/-/-/-/-/-/-/-/ 
                             Begin Product Button Actions 
                         -/-/-/-/-/-/-/-/-/-/-->
                 <div class="product-button-actions">
+                    @if($product->quantity > 0)
                         <form action="{{ route('add-to-cart') }}" method="POST">
                                 @csrf
                                 <input type="hidden" name="id" value="{{$product->id}}">
@@ -99,6 +85,7 @@ Begin Product ShowCase
                                 <input type="hidden" name="price" value="{{$product->price}}">
                                  <button type="submit" class="button button-plain">Add to Cart</button>
                              </form>
+                             @endif
                 </div>
                 <!--/-/-/-/-/-/-/-/-/ 
                             End Product Button Actions 

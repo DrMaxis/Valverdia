@@ -191,7 +191,7 @@
                                                 <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                                         
                                                     <tr>
-                                                        <td align="left" style="font-family: Arial, sans-serif; color: #333333; font-size: 16px;"><a href="{{ route('single-product', $product->slug) }}">{{ $product->name }}</a></td>
+                                                        <td align="left" style="font-family: Arial, sans-serif; color: #333333; font-size: 16px;"><a href="{{ route('single-product', $product->slug) }}">{{ $product->name }}(x {{ $product->pivot->quantity }} )</a></td>
                                                     </tr>
                                                 </table>
                                             </td>

@@ -46,11 +46,13 @@
                                 <td class="product-name"><a href="{{ route('single-product', $item->model->slug) }}">{{$item->model->name}}</a></td>
                                 <td class="product-price"><span class="amount">{{convertToUSD($item->model->price)}}</span></td>
                                 <td>
-                                    <select class="product-quantity" data-id="{{$item->rowId}}">
-                                                @for ($i = 1; $i < 5 + 1; $i++)
+                                        @if($item->model->quantity > 0)
+                                    <select class="product-quantity" data-id="{{$item->rowId}}" data-productQuantity="{{$item->model->quantity}}">
+                                                @for ($i = 1; $i < $item->model->quantity + 1; $i++)
                                                 <option {{ $item->qty == $i ? 'selected' : ''}}>{{$i}}</option>
                                                 @endfor
                                             </select>
+                                            @endif
                                 </td>
                                 <td class="product-subtotal">{{convertToUSD($item->subtotal)}}</td>
                                 <td>

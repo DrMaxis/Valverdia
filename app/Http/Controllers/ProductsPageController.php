@@ -49,14 +49,22 @@ class ProductsPageController extends Controller
     public function show($slug) {
         $product = Product::where('slug', $slug)->firstOrFail();
         $popular = Product::where('slug', '!=', $slug)->inRandomOrder()->take(3)->get();
+
+
+        $stockLevel = getStockLevel($product->quantity);
+
+    
         return view('singleProduct')->with([
             'product' => $product,
             'popular' => $popular,
+            'stockLevel' => $stockLevel,
             'discount' => $this->getData()->get('discount'),
             'newSubtotal' => $this->getData()->get('newSubtotal'),
             'newTax' => $this->getData()->get('newTax'),
             'newTotal' => $this->getData()->get('newTotal'),
             ]);
+
+
     }
 
     private function getData() {

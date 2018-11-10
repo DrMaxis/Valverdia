@@ -42,6 +42,12 @@ class CartController extends Controller
 
     public function store(Request $request) {
 
+
+        if($this->productsAreNoLongerAvailable()) {
+            return back()->withErrors('You do not have access to this!');
+        }
+
+
         $dupes = Cart::search(function($cartItem, $rowId) use ($request) {
             return $cartItem->id === $request->id;
         });
@@ -52,10 +58,12 @@ class CartController extends Controller
 
         Cart::add($request->id, $request->name, 1, $request->price)
         ->associate('App\Product');
+         // Inventory check
+         $this->decreaseQuantities();
 
-        return redirect()->route('cart')->with('success_message', 'Item was added to your cart!');
+        return back()->with('success_message', 'Item was added to your cart!');
         
-    }
+    } 
 
 
        /**
@@ -94,6 +102,11 @@ class CartController extends Controller
          return response()->json(['success' => false], 400);
         }
 
+        if($request->quanity > $request->productQuanity) {
+            session()->flash('errors', collect(['Item went out of stock!']));
+            return response()->json(['success' => false], 400);
+        }
+
 
          Cart::update($id, $request->quantity);
 
@@ -114,6 +127,24 @@ class CartController extends Controller
            'newTax' => $newTax,
            'newTotal' => $newTotal,
        ]);
+    }
+
+    protected function decreaseQuantities() {
+        foreach(Cart::content() as $item) {
+            $product = Product::find($item->model->id);
+            $product->update(['quantity' => $product->quantity - $item->qty]);
+        }
+    }
+
+    protected function productsAreNoLongerAvailable() {
+        foreach(Cart::content() as $item) {
+            $product = Product::find($item->model->id);
+            if($product->quantity < $item->qty) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
 }

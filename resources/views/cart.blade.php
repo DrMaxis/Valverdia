@@ -18,9 +18,11 @@
     Array.from(classname).forEach(function(element) {
         element.addEventListener('change', function() {
             const id = element.getAttribute('data-id')
-            axios.patch(`/cart/${id}`, {
-    quantity: this.value
-  })
+            const productQuantity = element.getAttribute('data-productQuantity')
+                    axios.patch(`/cart/${id}`, {
+                        quantity: this.value,
+                        productQuantity: productQuantity
+                    })
   .then(function (response) {
     window.location.href = '{{ route('cart') }}'
   })

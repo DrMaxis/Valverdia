@@ -33,8 +33,9 @@
                             <div class="row">
                                     
     
-    
+                                     
                                     @forelse($products as $product)
+                                    
                                 <!-- Main Single Product Start -->
                                 <div class="main-single-product fix">
                                     <div class="col-sm-4">
@@ -66,15 +67,19 @@
                                             </div>
                                             <!-- Product Price End -->
                                             <!-- Product Button Actions Start -->
+                                            
                                             <div class="product-button-actions">
-                                                   
+                                                 @if($product->quantity == 0)  
+                                                    <h2>Sold Out</h2>
+                                                    @else
                                                     <form action="{{ route('add-to-cart') }}" method="POST">
-                                                       @csrf
-                                                       <input type="hidden" name="id" value="{{$product->id}}">
-                                                       <input type="hidden" name="name" value="{{$product->name}}">
-                                                       <input type="hidden" name="price" value="{{$product->price}}">
-                                                        <button type="submit" class="button button-plain">Add to Cart</button>
-                                                    </form>
+                                                            @csrf
+                                                            <input type="hidden" name="id" value="{{$product->id}}">
+                                                            <input type="hidden" name="name" value="{{$product->name}}">
+                                                            <input type="hidden" name="price" value="{{$product->price}}">
+                                                             <button type="submit" class="button button-plain">Add to Cart</button>
+                                                         </form>
+                                                         @endif
                                             </div>
 
                                         
@@ -83,11 +88,12 @@
                                         <!-- Product Content End -->
                                     </div>
                                 </div>
+                                
                                 @empty
                                 <div>Coming Soon!</div>
-                                
+                                 
                                 @endforelse
-                                
+                               
                             </div>
                             <!-- Row End -->
                         </div>
@@ -115,13 +121,16 @@
                                         <div class="pro-content text-center">
                                             <h4><a href="{{route('single-product', $product->slug)}}">{{$product->name}}</a></h4>
                                             <p class="price"><span>{{convertToUSD($product->price)}}</span></p>
-                                            <form class="action-links2" action="{{route('add-to-cart')}}" method="POST">
-                                                @csrf
-                                                <input type="hidden" name="id" value="{{$product->id}}">
-                                                <input type="hidden" name="name" value="{{$product->name}}">
-                                                <input type="hidden" name="price" value="{{$product->price}}">
-                                                <button data-toggle="tooltip"  type="submit"data-original-title="Add to Cart">add to cart</button> 
-                                            </form>
+                                            @if($product->quantity == 0)  
+                                                    @else
+                                                    <form class="action-links2"action="{{ route('add-to-cart') }}" method="POST">
+                                                            @csrf
+                                                            <input type="hidden" name="id" value="{{$product->id}}">
+                                                            <input type="hidden" name="name" value="{{$product->name}}">
+                                                            <input type="hidden" name="price" value="{{$product->price}}">
+                                                            <button data-toggle="tooltip"  type="submit"data-original-title="Add to Cart">add to cart</button>
+                                                         </form>
+                                                         @endif
                                         </div>
                                         <!-- Product Content End -->
                                     </div>
