@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Color;
+use App\Order;
+use App\Product;
+use App\OrderProduct;
+use App\Mail\OrderPlaced;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Http\Requests\CheckoutRequest;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Cartalyst\Stripe\Laravel\Facades\Stripe;
 use Cartalyst\Stripe\Exception\CardErrorException;
-use App\Product;
-use App\Color;
-use App\Order;
-use App\OrderProduct;
-use App\Http\Requests\CheckoutRequest;
 
 
 class CheckoutController extends Controller
@@ -93,10 +95,11 @@ class CheckoutController extends Controller
 
           
             $order = $this->addToOrdersTables($request, null);
+            Mail::send(new OrderPlaced($order));
             Cart::instance('default')->destroy();
             session()->forget('coupon');
 
-        return redirect()->route('confirm-purchase')->with('success_message', 'Thank You! Your Order Has Been Placed!');
+        return redirect()->route('confirm-purchase')->with('success_message', 'Thank You! Your Order Has Been Placed! An Email has been sent to your email address.');
 
     } catch (CardErrorException $e) {
         $this->addToOrdersTables($request, $e->getMessage());
