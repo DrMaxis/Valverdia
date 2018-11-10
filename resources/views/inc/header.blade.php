@@ -99,7 +99,7 @@
                                 <li>
                                     <h3>My Account</h3>
                                     <ul>
-                                        <li><a href="account.html">My Account</a></li>
+                                        <li><a href="{{route('dashboard')}}">My Account</a></li>
                                         @guest
                                         <li><a href="{{route('login')}}">Login</a></li>
                                         <li><a href="{{route('register')}}">Sign Up</a></li>

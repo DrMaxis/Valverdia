@@ -18,3 +18,5 @@
 <!--/-/-/-/-/-/-/-/-/
     End Title
 -/-/-/-/-/-/-/-/-/-/-->
+
+@include('inc.notifications')

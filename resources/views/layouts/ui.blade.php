@@ -5,7 +5,8 @@
 -->
 
 <html class="no-js" lang="{{ app()->getLocale() }}">
-    @include('inc.head') @yield('xcss')
+    @include('inc.head') 
+    @yield('xcss')
 
 <body>
     <section class="vbox">

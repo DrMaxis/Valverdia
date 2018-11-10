@@ -1,4 +1,5 @@
 <?php
+use Carbon\Carbon;
 
 function convertToUSD($price)
 {
@@ -34,4 +35,9 @@ function getNumbers() {
        'newTotal' => $newTotal,
        'tax' => $tax,
    ]);
+}
+
+function presentDate($date)
+{
+    return Carbon::parse($date)->format('M d, Y');
 }

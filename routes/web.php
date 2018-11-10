@@ -34,6 +34,13 @@ Route::delete('/coupon', 'CouponsController@destroy')->name('remove-coupon');
 Route::get('/about', 'AboutUsController@index')->name('about');
 Route::get('/blog', 'BlogController@index')->name('blog');
 
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', 'UsersController@edit')->name('dashboard');
+    Route::patch('/dashboard', 'UsersController@update')->name('update-accountcred');
+    Route::get('/orders', 'OrdersController@index')->name('orders');
+    Route::get('/orders/{order}', 'OrdersController@show')->name('show-order');
+});
+//Route::get('/dashboard', 'UsersController@index')->name('dashboard')->middleware('auth');
 
 Route::get('test', 'TestPAgeController@index');
 Route::get('empty', function() {
