@@ -64,9 +64,10 @@
                              <div class="footer-content subscribe-form">
                                  <p class="mb-25">Subscribe to our newsletter and get 10% off your first purchase</p>
                                  <div class="subscribe-box">
-                                     <form action="#">
-                                         <input type="text" name="subscribe_email" id="subscribe_email" placeholder="Enter you email address here...">
-                                         <input type="submit" class="submit" value="subscribe">
+                                     <form >
+                                        {{-- @csrf --}}
+                                         <input type="hidden" name="email"  id="subscribe_email" placeholder="Enter you email address here...">
+                                         <button  class="submit"> Coming Soon!</button>
                                      </form>
                                  </div>
                              </div>

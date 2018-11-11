@@ -9,15 +9,15 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
     return view('welcome');
 });
-
-
 Route::get('/', 'LandingPageController@index')->name('front-page');
+
 Route::get('/products', 'ProductsPageController@index')->name('products');
+Route::get('/search', 'ProductsPageController@search')->name('search');
 Route::get('/products/{product}', 'ProductsPageController@show')->name('single-product');
 Route::get('/cart', 'CartController@index')->name('cart');
 Route::post('/cart', 'CartController@store')->name('add-to-cart');
@@ -25,6 +25,7 @@ Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy')
 Route::patch('/cart/{product}', 'CartController@update')->name('update-cart');
 Route::get('/checkout', 'CheckoutController@index')->name('checkout')->middleware('auth');
 Route::post('/checkout/send', 'CheckoutController@store')->name('checkout-send');
+Route::post('/paypalcheckout', 'CheckoutController@paypalCheckout')->name('paypal-checkout');
 Route::get('/guestcheckout', 'CheckoutController@index')->name('guest-checkout');
 Route::get('/thankyou', 'CheckoutController@confirm')->name('confirm-purchase');
 
@@ -43,7 +44,7 @@ Route::middleware('auth')->group(function () {
 //Route::get('/dashboard', 'UsersController@index')->name('dashboard')->middleware('auth');
 
 Route::get('test', 'TestPAgeController@index');
-Route::get('empty', function() {
+Route::get('empty', function () {
     Cart::destroy();
 });
 /* Route::view('/products', 'products');

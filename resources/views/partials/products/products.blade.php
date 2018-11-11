@@ -24,7 +24,12 @@
                         <strong>Sort Price By: </strong>
                     <a href="{{ route('products', ['category'=> request()->category, 'sort' => 'low_high']) }}">Low to High</a> |
                     <a href="{{ route('products', ['category'=> request()->category, 'sort' => 'high_low']) }}">High to Low</a>
+                    
                 </div>
+                
+                @include('inc.search')
+
+                
             </div>
             <div class="row">
                 <div class="col-sm-12">

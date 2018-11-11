@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Color;
 use App\Order;
+use Braintree;
 use App\Product;
 use App\OrderProduct;
 use App\Mail\OrderPlaced;
@@ -32,7 +33,16 @@ class CheckoutController extends Controller
             return redirect()->route('checkout');
         }
 
+        $gateway = new \Braintree\Gateway([
+            'environment' => config('services.braintree.environment'),
+            'merchantId' => config('services.braintree.merchantId'),
+            'publicKey' => config('services.braintree.publicKey'),
+            'privateKey' => config('services.braintree.privateKey')
+        ]);
+$paypalToken = $gateway->ClientToken()->generate();
+
        return view('checkout')->with([
+           'paypalToken' => $paypalToken,
            'discount' => $this->getNumbers()->get('discount'),
            'newSubtotal' => $this->getNumbers()->get('newSubtotal'),
            'newTax' => $this->getNumbers()->get('newTax'),

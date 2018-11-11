@@ -33,12 +33,14 @@
                     End Primary-Menu  
                     -/-/-/-/-/-/-/-/-/-->
 
+                   
             <!--/-/-/-/-/-/-/-/-/ 
                     Begin Header All Shopping Selection 
                     -/-/-/-/-/-/-/-/-/-->
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-7 full-col pr-0">
                 <div class="main-selection">
                     <ul class="selection-list text-right">
+                        
 
                         @if (Cart::count() > 0)
 

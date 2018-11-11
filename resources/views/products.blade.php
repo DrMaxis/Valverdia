@@ -1,4 +1,8 @@
 @extends('layouts.products_ui') 
+@section('xcss')
+
+
+@endsection
 @section('content') 
     {{-- Title --}}
     @include('partials.products.title')

@@ -1,25 +1,24 @@
-@extends('layouts.products_ui')
-
-@section('content')
-
-{{-- Title --}}
-@include('partials.checkout.title')
-{{-- Sub Heading (Checkoutarea Title) --}}
-@include('partials.checkout.subheader')
-{{-- Checkout Area Table --}}
-@include('partials.checkout.checkoutarea')
+@extends('layouts.products_ui') 
+@section('extra-css')
+<style>
+  .mt-32 {
+    margin-top: 32px;
+  }
+</style>
+@endsection
+ 
+@section('content') {{-- Title --}}
+  @include('partials.checkout.title') {{-- Sub Heading (Checkoutarea Title)
+--}}
+  @include('partials.checkout.subheader') {{-- Checkout Area Table --}}
+  @include('partials.checkout.checkoutarea')
 @endsection
 
 
-
-
-
-
-
 @section('xjs')
-
+<script src="https://js.braintreegateway.com/web/dropin/1.13.0/js/dropin.min.js"></script>
 <script>
-        (function(){
+  (function(){
    // Create a Stripe client.
    var stripe = Stripe('pk_test_mMsfkIO9oSdbzRyWVLhgvslc');
    
@@ -111,9 +110,37 @@ document.getElementById('complete-order').disabled = true;
               form.submit();
             }
 
+// PayPal Stuff
+var form = document.querySelector('#paypal-payment-form');
+            var client_token = "{{ $paypalToken }}";
+            braintree.dropin.create({
+              authorization: client_token,
+              selector: '#bt-dropin',
+              paypal: {
+                flow: 'vault'
+              }
+            }, function (createErr, instance) {
+              if (createErr) {
+                console.log('Create Error', createErr);
+                return;
+              }
+              // remove credit card option
+              var elem = document.querySelector('.braintree-option__card');
+              elem.parentNode.removeChild(elem);
+              form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                instance.requestPaymentMethod(function (err, payload) {
+                  if (err) {
+                    console.log('Request Payment Method Error', err);
+                    return;
+                  }
+                  // Add the nonce to the form and submit
+                  document.querySelector('#nonce').value = payload.nonce;
+                  form.submit();
+                });
+              });
+            });
 
    })();
-   </script>
-   
-
+</script>
 @endsection
