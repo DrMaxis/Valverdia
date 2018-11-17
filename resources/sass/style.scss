@@ -4513,22 +4513,17 @@ canvas {
 
 @media (min-width: 768px) {
 
-    .app,
-    .app body {
-        height: 100%;
-        overflow: hidden;
-    }
 
-    .app .hbox.stretch {
+
+     .hbox.stretch {
         height: 100%;
     }
 
-    .app .vbox>section,
-    .app .vbox>footer {
+     .vbox>section {
         position: absolute;
     }
 
-    .app .vbox.flex>section>section {
+     .vbox.flex>section>section {
         overflow: auto;
     }
 
@@ -4646,19 +4641,6 @@ canvas {
 
     .aside-xxl {
         width: 480px;
-    }
-
-    .header-md {
-        min-height: 60px;
-    }
-
-    .header-md .navbar-form {
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
-    .footer-md {
-        min-height: 60px;
     }
 
     .scrollable {

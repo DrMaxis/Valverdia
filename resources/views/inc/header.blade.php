@@ -3,7 +3,7 @@
 -/-/-/-/-/-/-/-/-/-->
 
 <header>
-    <div class="container-fluid header-top-area header-sticky">
+    <div class="container-fluid header-top-area">
         <div class="row">
             <!--/-/-/-/-/-/-/-/-/
                         Begin Logo 

@@ -10,29 +10,30 @@ use App\Category;
 
 class ProductsPageController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $categories = Category::all();
         $colors = Color::all();
-        if(request()->category) {
+        if (request()->category) {
             $products = Product::with('categories')->whereHas('categories', function ($query) {
-            $query->where('slug', request()->category);
+                $query->where('slug', request()->category);
             })->get();
             $categoryName = optional($categories->where('slug', request()->category)->first())->name;
-           
-            
+
+
         } else {
-        $products = Product::inRandomOrder()->take(8)->get();
-        $categoryName = 'High Quality LED Lights';
-        
+            $products = Product::inRandomOrder()->take(8)->get();
+            $categoryName = 'High Quality LED Lights';
+
         }
 
-        if(request()->sort == 'low_high') {
+        if (request()->sort == 'low_high') {
             $products = $products->sortBy('price');
         } elseif (request()->sort == 'high_low') {
             $products = $products->sortByDesc('price');
         }
 
-        
+
         return view('products')->with([
             'products' => $products,
             'categories' => $categories,
@@ -46,14 +47,15 @@ class ProductsPageController extends Controller
 
 
 
-    public function show($slug) {
+    public function show($slug)
+    {
         $product = Product::where('slug', $slug)->firstOrFail();
         $popular = Product::where('slug', '!=', $slug)->inRandomOrder()->take(3)->get();
 
 
         $stockLevel = getStockLevel($product->quantity);
 
-    
+
         return view('singleProduct')->with([
             'product' => $product,
             'popular' => $popular,
@@ -62,25 +64,11 @@ class ProductsPageController extends Controller
             'newSubtotal' => $this->getData()->get('newSubtotal'),
             'newTax' => $this->getData()->get('newTax'),
             'newTotal' => $this->getData()->get('newTotal'),
-            ]);
+        ]);
 
 
     }
 
-    private function getData() {
-        $subtotal = convertToUSD(Cart::subtotal());
-        $tax = config('cart.tax') / 100;
-        $discount = session()->get('coupon')['discount'] ?? 0;
-        $newSubtotal = ($subtotal - $discount);
-        $newTax = $newSubtotal * $tax;
-        $newTotal = $newSubtotal * (1 + $tax);
-       return collect([
-           'discount' => $discount,
-           'newSubtotal' => $newSubtotal,
-           'newTax' => $newTax,
-           'newTotal' => $newTotal,
-       ]);
-    }
 
 
     public function search(Request $request)
@@ -94,7 +82,30 @@ class ProductsPageController extends Controller
         //                    ->orWhere('description', 'like', "%$query%")
         //                    ->paginate(10);
         $products = Product::search($query)->paginate(10);
-        return view('searchResults')->with('products', $products);
+        return view('searchResults')->with([
+            'products' => $products,
+            'discount' => $this->getData()->get('discount'),
+            'newSubtotal' => $this->getData()->get('newSubtotal'),
+            'newTax' => $this->getData()->get('newTax'),
+            'newTotal' => $this->getData()->get('newTotal'),
+
+        ]);
+    }
+
+    private function getData()
+    {
+        $subtotal = convertToUSD(Cart::subtotal());
+        $tax = config('cart.tax') / 100;
+        $discount = session()->get('coupon')['discount'] ?? 0;
+        $newSubtotal = ($subtotal - $discount);
+        $newTax = $newSubtotal * $tax;
+        $newTotal = $newSubtotal * (1 + $tax);
+        return collect([
+            'discount' => $discount,
+            'newSubtotal' => $newSubtotal,
+            'newTax' => $newTax,
+            'newTotal' => $newTotal,
+        ]);
     }
 
 }

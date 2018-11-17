@@ -50,7 +50,7 @@
             const productQuantity = element.getAttribute('data-productQuantity')
             axios.patch(`/cart/${id}`, {
     quantity: this.value
-    productQuantity: productQuantity
+  
   })
   .then(function (response) {
     window.location.href = '{{ route('cart') }}'
