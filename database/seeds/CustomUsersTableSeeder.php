@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 use TCG\Voyager\Models\Role;
 use TCG\Voyager\Models\User;
 
-class UsersTableSeeder extends Seeder
+class CustomUsersTableSeeder extends Seeder
 {
     /**
      * Auto generated seed file.
@@ -13,13 +13,13 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        if (User::count() == 0) {
-            $role = Role::where('name', 'admin')->firstOrFail();
+        if (User::count() == 1) {
+            $role = Role::where('name', 'mod')->firstOrFail();
 
             User::create([
-                'name'           => 'Admin',
-                'email'          => 'admin@admin.com',
-                'password'       => bcrypt(config('voyager.adminPassword')),
+                'name'           => 'mod',
+                'email'          => 'xenmod@mod.com',
+                'password'       => bcrypt('password'),
                 'remember_token' => str_random(60),
                 'role_id'        => $role->id,
             ]);

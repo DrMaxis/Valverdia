@@ -209,6 +209,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Newsletter' => Spatie\Newsletter\NewsletterFacade::class,
+        'Menu' => TCG\Voyager\Models\Menu::class,
 
     ],
 
