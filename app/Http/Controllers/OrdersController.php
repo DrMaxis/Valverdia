@@ -56,6 +56,10 @@ class OrdersController extends Controller
         return view('singleOrder')->with([
             'order' => $order,
             'products' => $products,
+            'discount' => $this->getNumbers()->get('discount'),
+            'newSubtotal' => $this->getNumbers()->get('newSubtotal'),
+            'newTax' => $this->getNumbers()->get('newTax'),
+            'newTotal' => $this->getNumbers()->get('newTotal'),
         ]);
     }
     /**
