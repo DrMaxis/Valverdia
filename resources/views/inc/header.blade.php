@@ -11,7 +11,7 @@
 
             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-5 full-col pl-0">
                 <div class="logo">
-                    <a href="{{route('front-page')}}"><img src="{{asset('storage/assets/imgs/logo.png')}}" alt="brand-image"></a>
+                    <a href="{{route('front-page')}}"><img src="{{asset('storage/assets/imgs/boxlogo.png')}}" alt="brand-image"></a>
                 </div>
             </div>
             <!--/-/-/-/-/-/-/-/-/ 

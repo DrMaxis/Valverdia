@@ -26,9 +26,9 @@
                         <section class="hbox stretch">
                             <section>
                                 <section class="vbox">
-                                    <section class="scrollable padder-lg w-f-md" id="bjax-target">
-                                        <a href="#" class="pull-right text-muted m-t-lg" data-toggle="class:fa-spin"><i class="icon-refresh i-lg  inline" id="refresh"></i></a>
-                                        <h2 class="font-thin m-b">Discover </h2>
+                                    <section class="scrollable padder-lg w-f-md">
+                                        
+    
                                         <div class="row row-sm">
                                             @yield('content')
     @include('inc.footer')
@@ -101,10 +101,7 @@
     Main
 -/-/-/-/-/-/-/-/-/-->
  <script type="text/javascript" src="{{asset('js/main.js')}}"></script>
-<!--/-/-/-/-/-/-/-/-/ 
-    Wave
--/-/-/-/-/-/-/-/-/-->
- <script type="text/javascript" src="{{asset('js/wave.js')}}"></script>
+
 
 
 

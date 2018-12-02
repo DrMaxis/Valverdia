@@ -17,7 +17,7 @@ class CouponsController extends Controller
      */
     public function store(Request $request)
     {
-        $coupon = Coupon::where('coupon_code', $request->coupon_code)->first();
+        $coupon = Coupon::where('coupon-code', $request->coupon_code)->first();
         
         if(!$coupon) {
             return redirect()->route('cart')->withErrors('Wrong Coupon Code?');

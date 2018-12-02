@@ -39,18 +39,27 @@ Description: Responsive Furniture & Interior Ecommerce HTML Template;
 /* 1. Theme Default CSS
 /*----------------------------------------*/
 @font-face {
-    font-family: 'axr_arcademachineregular';
-    src: url('./fonts/axr_arcademachine-webfont.woff2') format('woff2'),
-         url('./fonts/axr_arcademachine-webfont.woff') format('woff');
+    font-family: 'baron_neue_bold_italicBdIt';
+    src: url('./fonts/baron_neue_bold_italic-webfont.woff2') format('woff2'),
+         url('./fonts/baron_neue_bold_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'baron_neueitalic';
+    src: url('./fonts/baron_neue_italic-webfont.woff2') format('woff2'),
+         url('./fonts/baron_neue_italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
 body {
-    font-family: 'axr_arcademachineregular';
+    font-family: 'baron_neueitalic';
     font-weight: 400;
-    color: #505050;
+    color: #ffffff;
     font-size: 14px;
     line-height: 24px;
     width: 100%;
@@ -70,7 +79,7 @@ body {
 .section-desc {
     font-size: 16px;
     font-style: italic;
-    font-family: 'axr_arcademachineregular';
+    font-family: 'baron_neueitalic';
     display: block;
 }
 
@@ -259,7 +268,7 @@ input#newsletter-permission {
 /* 3. Preloader CSS
 /*----------------------------------------*/
 .preloader {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0);
     height: 100%;
     width: 100%;
     position: fixed;
@@ -406,7 +415,7 @@ input#newsletter-permission {
 }
 
 .header-top-area {
-    padding-top: 37px;
+    //padding-top: 37px;
 }
 
 .primary-menu-list>li,
@@ -423,7 +432,7 @@ input#newsletter-permission {
 .primary-menu-list>li>a {
     font-size: 16px;
     display: block;
-    color: #505050;
+    color: #ffffff;
     text-transform: capitalize;
     margin: 0 18px;
     padding-bottom: 37px;
@@ -438,7 +447,7 @@ input#newsletter-permission {
 }
 
 .selection-list>li i {
-    color: #1a1a1a;
+    color: #ffffff;
     font-size: 25px;
     cursor: pointer;
 }
@@ -997,7 +1006,7 @@ ul.pull-left.home-4-search i {
     line-height: 1;
     font-size: 16px;
     font-weight: 600;
-    color: #505050;
+    color: #ffffff;
     background: none;
     position: relative;
     text-align: left;
@@ -1130,7 +1139,7 @@ ul.pull-left.home-4-search i {
 }
 
 .price {
-    color: #505050;
+    color: #ffffff;
     font-size: 16px;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
@@ -1168,7 +1177,7 @@ ul.pull-left.home-4-search i {
 }
 
 .pro-content .action-links2 a {
-    color: #505050;
+    color: #ffffff;
     font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
@@ -1428,7 +1437,7 @@ ul.pull-left.home-4-search i {
 .breadcrumb-list li a {
     text-transform: capitalize;
     font-size: 15px;
-    color: #505050;
+    color: #ffffff;
 }
 
 .breadcrumb-list li:last-child a {
@@ -1528,7 +1537,7 @@ ul.pull-left.home-4-search i {
     border: 1px solid #e5e5e5;
     padding: 0;
     background: none;
-    color: #505050;
+    color: #ffffff;
     display: inline-block;
     text-align: center;
 }
@@ -1871,7 +1880,7 @@ ul.pull-left.home-4-search i {
 
 .categorie-sidebar ul li a {
     text-transform: capitalize;
-    color: #505050;
+    color: #ffffff;
     font-size: 15px;
 }
 
@@ -1909,7 +1918,7 @@ ul.pull-left.home-4-search i {
     text-align: center;
     font-size: 15px;
     margin-top: 8px;
-    color: #505050;
+    color: #ffffff;
     background: transparent;
     border: none;
 }
@@ -1957,7 +1966,7 @@ ul.pull-left.home-4-search i {
 
 .refine-seaarch-list>li>a:hover,
 .custom-categorie a:hover {
-    color: #505050;
+    color: #ffffff;
 }
 
 .blog-pagination {
@@ -1972,7 +1981,7 @@ ul.pull-left.home-4-search i {
 .blog-pagination li a {
     display: block;
     font-size: 16px;
-    color: 505050;
+    color: ffffff;
     border: 1px solid #e7e7e7;
     width: 40px;
     text-align: center;
@@ -1998,7 +2007,7 @@ ul.pull-left.home-4-search i {
 .grid-list-view li a,
 .home-2 .new-products-list li a,
 .home-4 .new-products-list li a {
-    color: #505050;
+    color: #ffffff;
 }
 
 .grid-list-view li.active a,
@@ -2015,7 +2024,7 @@ ul.pull-left.home-4-search i {
     border: 1px solid #ccc;
     border-radius: 0;
     box-shadow: none;
-    color: #505050;
+    color: #ffffff;
     font-size: 14px;
     height: 28px;
     padding: 0 6px;
@@ -2035,7 +2044,7 @@ ul.pull-left.home-4-search i {
 }
 
 .categorie-list .product-header:hover a {
-    color: #505050;
+    color: #ffffff;
 }
 
 .main-single-product {
@@ -2046,14 +2055,16 @@ ul.pull-left.home-4-search i {
 /* 15. Footer Top CSS
 /*----------------------------------------*/
 .container-footer {
-    border-top: 1px solid #ddd;
+    border-top: 0.25rem solid #fb00ff;
+    border-image-source: linear-gradient(90deg, #d43030, #d87a00, #e4c900, #37bc37, #4343c6, #9b1cf5, #b902b9);
+    border-image-slice: 33;
 }
 
 .footer-title {
     font-size: 16px;
     font-weight: 800;
     text-transform: uppercase;
-    font-family: 'axr_arcademachineregular';
+    font-family: 'baron_neueitalic';
 }
 
 .footer-content {
@@ -2070,7 +2081,7 @@ ul.pull-left.home-4-search i {
 }
 
 .footer-list li a {
-    color: #505050;
+    color: #ffffff;
     text-transform: capitalize;
     padding: 3px 0;
     display: block;
@@ -2138,7 +2149,7 @@ ul.pull-left.home-4-search i {
     line-height: 48px;
     margin-top: 20px;
     padding: 0 40px;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     width: 170px;
     transition: all 0.3s ease-in;
 }
@@ -2280,7 +2291,7 @@ ul.pull-left.home-4-search i {
 }
 
 .banner-content a:hover {
-    color: #505050;
+    color: #ffffff;
 }
 
 .home-2 .new-products-list li a,
@@ -2515,7 +2526,7 @@ ul.pull-left.home-4-search i {
 
 .home-4 .single-product .pro-content p {
     font-size: 20px;
-    color: #505050;
+    color: #ffffff;
 }
 
 .home-4 .single-product .pro-content .home-four-cart {
@@ -3068,7 +3079,7 @@ p.checkout-coupon input[type="submit"] {
 .country-select label,
 .checkout-form-list label {
     color: #333;
-    font-family: 'axr_arcademachineregular';
+    font-family: 'baron_neueitalic';
     margin: 0 0 5px;
     display: block;
     font-weight: 700;
@@ -3187,7 +3198,7 @@ p.checkout-coupon input[type="submit"] {
 
 .your-order-table table th {
     border-top: medium none;
-    font-family: 'axr_arcademachineregular';
+    font-family: 'baron_neueitalic';
     font-weight: normal;
     text-align: center;
     text-transform: uppercase;
@@ -3310,7 +3321,7 @@ legend {
 .customer-btn,
 .return-customer-btn {
     background: transparent;
-    color: #1a1a1a;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -3705,7 +3716,7 @@ legend {
 }
 
 .post-info-right a i {
-    color: #505050;
+    color: #ffffff;
 }
 
 .post-info a:hover {
@@ -3763,8 +3774,11 @@ legend {
 
 .categorie-list>li {
     border-bottom: 1px solid #dddddd;
+    border-image-source: linear-gradient(90deg, #d43030, #d87a00, #e4c900, #37bc37, #4343c6, #9b1cf5, #b902b9);
+    border-image-slice: 33;
     margin-bottom: 12px;
     padding-bottom: 12px
+
 }
 
 .categorie-list li:last-child {
@@ -4052,7 +4066,7 @@ input[type="radio"] {
 
 .view,
 .view-cart {
-    background: #505050 none repeat scroll 0 0;
+    background: #ffffff none repeat scroll 0 0;
     color: #fff;
     padding: 5px 12px;
     text-transform: capitalize;

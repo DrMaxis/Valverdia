@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Coupon extends Model
 {
+    protected $table = "coupons";
+
     public static function findByCouponCode($code) {
 
         return self::where('code', $code)->first();

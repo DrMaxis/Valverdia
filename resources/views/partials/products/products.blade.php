@@ -20,10 +20,10 @@
                     </div>
                 </div>
                 
-                <div class="col-md-4 col-sm-5 pull-right">
+                <div class="col-md-6 col-sm-5" style="margin-left:-90px;">
                         <strong>Sort Price By: </strong>
-                    <a href="{{ route('products', ['category'=> request()->category, 'sort' => 'low_high']) }}">Low to High</a> |
-                    <a href="{{ route('products', ['category'=> request()->category, 'sort' => 'high_low']) }}">High to Low</a>
+                    <a style="color:Blue;" href="{{ route('products', ['category'=> request()->category, 'sort' => 'low_high']) }}">Low to High</a> |
+                    <a style="color:blue;" href="{{ route('products', ['category'=> request()->category, 'sort' => 'high_low']) }}">High to Low</a>
                     
                 </div>
                 

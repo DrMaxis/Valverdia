@@ -5,8 +5,8 @@
     <div class="container">
         <div class="row">
             <div class="register-title">
-                <h3 class="mb-10">REGISTER ACCOUNT</h3>
-                <p class="mb-10">If you already have an account with us, please login at the login page.</p>
+                <h3 class="mb-10">Register a new XenColor account</h3>
+                <p class="mb-10">If you already have an account with us, please login on the <a href="/login">login page.</a></p>
             </div>
         </div>
         <!-- Row End -->

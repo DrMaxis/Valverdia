@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Gloudemans\Shoppingcart\Facades\Cart;
+use App\Listeners\SendEmailVerificationNotification;
 use App\User;
 
 class RegisterController extends Controller
